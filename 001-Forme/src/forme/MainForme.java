@@ -6,7 +6,7 @@ public class MainForme {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		diocane
+		ciao
 		/* Creazione di una nuova istanza chiamata ' origine ' di tipo ' Punto ' */
 		Punto origine = new Punto();
 		/* Creazione di una nuova istanza chiamata ' unoZero ' di tipo ' Punto ' */
