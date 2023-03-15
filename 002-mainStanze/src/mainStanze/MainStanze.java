@@ -74,12 +74,17 @@ public class MainStanze {
 		System.out.println(n12.getNomeStanza());	// stampa alias N12
 		/* Perché stampa alias N12? 
 		 * Questo si chiama effetto collaterale, nel senso che avendo creato l'oggetto n12Alias che ha lo stesso riferimento
-		 * del blocchetto n12 ossia il blocco grande della stanza chiamata N12, si ha che se si modifica il nome del riferimento 
-		 * puntato da n12Alias di conseguenza si va a modificare il nome della variabile checontiene il riferimento 
-		 * all'oggetto N12
+		 * del blocchetto n12 ossia il blocco grande della stanza chiamata N12, quindi modificando il nome dell'oggetto sfruttando
+		 * una delle due variabili che contengono il riferimento ovviamente la restante variabile non utilizzata per la modifica
+		 * punterà sempre al medesimo oggetto con il nome modificato.
 		 */
 		
 		
+		/* riferimento a NULL */
+		Stanza n13 = new Stanza();
+		n13.setNomeStanza("aula N13");
+		n13.setStanzaAdiacente(null);	// significa che non possiede stanze adiacenti
+		//System.out.println(n13.getStanzaAdiacente().getNomeStanza());	// segnala l'errore NULLPOINTEREXCEPTION
 		
 	}
 

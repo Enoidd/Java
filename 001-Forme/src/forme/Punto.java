@@ -13,8 +13,8 @@ public class Punto {
 	private int y;
 	
 	/* Metodi */
-	public void setX(int posX) {
-		x = posX;
+	public void setX(int x) {
+		this.x = x;
 	}
 	
 	public void setY(int posY) {
@@ -22,7 +22,7 @@ public class Punto {
 	}
 	
 	public int getX() {
-		return x;
+		return this.x;
 	}
 	
 	public int getY() {
