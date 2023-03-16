@@ -62,7 +62,7 @@ public class MainForme {
 		/* Avendo aggiunto alla classe 'Rettangolo' un costruttore deve essere modificata la sintassi della creazione
 		 * della nuova istanza oggetto
 		 */
-		Rettangolo r = new Rettangolo(0, 0, );   21:08
+		Rettangolo r = new Rettangolo(0, 0, unoZero);
 		
 		/* Dopo questa istruzione l'oggetto istanza ' Rettangolo ' conosce l'oggetto istanza ' Punto ' */
 		r.setVertice(origine);	// Posso metterci anche 'unoZero' non cambierebbe nulla
@@ -78,7 +78,67 @@ public class MainForme {
 		/* Richiamo dei metodi sull'istanza ' r ' di tipo Rettangolo per spostare sull'asse delle X il rettangolo */
 		r.sposta(+2, +3);
 		System.out.println("Vertice del rettangolo spostato (+2, +3) (x,y): " + r.getVertice().getX() + "," + r.getVertice().getY());
+
+		System.out.println("");
+		System.out.println("");
+		System.out.println("=== MOLTEPLICI RIFERIMENTI PER LO STESSO OGGETTO ===");
+		System.out.println("");
+
+		Punto unitario = new Punto(1, 1);
+		Punto copia = unitario;	// copia contiene il riferimento contenuto da unitario con valori x=1 e y=1
 		
+		System.out.println(copia.getX());	// stampa x=1
+		System.out.println(copia.getY());	// stampa y=1
+		
+		copia.setX(2); 	// modifica la x=2
+		System.out.println(unitario.getX());	// stampa x=2
+		
+		System.out.println("");
+		System.out.println("");
+		System.out.println("=== SIDE-EFFECT E METODI ===");
+		System.out.println("");
+		
+		
+		ModificatoreDiPunti m = new ModificatoreDiPunti();
+		Punto punto_qualsiasi = new Punto(1,1);
+		m.azzera(punto_qualsiasi);
+		System.out.println(punto_qualsiasi.getX());	// Stampa 0
+		System.out.println(punto_qualsiasi.getY());	// Stampa 0
+		
+		
+		System.out.println("");
+		System.out.println("");
+		System.out.println("=== EQUIVALENZA TRA OGGETTI vs IDENTICITA' DEI RIFERIMENTI ===");
+		System.out.println("");
+		
+		Punto punto1 = new Punto(0, 0);
+		Punto punto2 = new Punto(0, 0);
+		
+		if(punto1 == punto2)
+			System.out.println("uguali");
+		else
+			System.out.println("diversi");	// stampa diversi
+		
+		/* Se entrambi hanno lo stesso riferimento */
+		punto1 = punto2;
+		
+		if(punto1 == punto2)
+			System.out.println("uguali");	// stampa uguali
+		else
+			System.out.println("diversi");
+		
+		
+		System.out.println("");
+		System.out.println("");
+		System.out.println("=== EQUIVALENZA FRA STRINGHE ===");
+		System.out.println("");
+		
+		String nome1 = new String("Alice");
+		String nome2 = new String("Alice");
+		
+		System.out.println(nome1.equals(nome2));	// Stampa 1 (TRUE)
+		
+		System.out.println(punto1.equals(punto2));
 	}
 
 }
