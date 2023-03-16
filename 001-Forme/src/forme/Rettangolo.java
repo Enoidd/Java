@@ -5,7 +5,14 @@ public class Rettangolo {
 	/* Variabili di istanza */
 	private int base;
 	private int altezza;
-	private Punto verticeSx;	// Posizione del vertice in alto a sx (di coordinate x, y)
+	private Punto vertice;	// Posizione del vertice in alto a sx (di coordinate x, y)
+	
+	/* Costruttore */
+	public Rettangolo(int base, int altezza, Punto vertice) {
+		this.base = base;
+		this.altezza = altezza;
+		this.vertice = vertice;
+	}
 	
 	/* Metodi */
 	public void setBase(int b) {
@@ -17,7 +24,7 @@ public class Rettangolo {
 	}
 	
 	public void setVertice(Punto v) {
-		verticeSx = v;
+		vertice = v;
 	}
 	
 	public int getBase() {
@@ -29,12 +36,12 @@ public class Rettangolo {
 	}
 	
 	public Punto getVertice() {
-		return verticeSx;
+		return vertice;
 	}
 	
 	/* Metodo 'sposta' della classe 'Rettangolo' */
 	public void sposta(int deltaX, int deltaY) {
-		verticeSx.trasla(deltaX, deltaY);
+		vertice.trasla(deltaX, deltaY);
 		
 		/* Nel caso in cui la classe 'Punto' non disponesse di un metodo 'trasla' */
 		/*int xVertice = verticeSx.getX();

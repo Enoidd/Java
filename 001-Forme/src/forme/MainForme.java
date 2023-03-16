@@ -8,9 +8,14 @@ public class MainForme {
 		
 		
 		/* Creazione di una nuova istanza chiamata ' origine ' di tipo ' Punto ' */
-		Punto origine = new Punto();
+		/* Avendo creato un costruttore per la classe Punto, deve essere modificata la sintassi per la creazione
+		 * del nuovo oggetto 
+		 */
+		Punto origine = new Punto(0, 0);
+		
+		
 		/* Creazione di una nuova istanza chiamata ' unoZero ' di tipo ' Punto ' */
-		Punto unoZero = new Punto();
+		Punto unoZero = new Punto(2, 2);
 		
 		
 		/* Richiamo dei metodi sull'istanza ' origine ' per definire le coordinate x, y */
@@ -53,7 +58,11 @@ public class MainForme {
 		
 		
 		/* Creazione di una nuova istanza chiamata ' r ' di tipo Rettangolo */
-		Rettangolo r = new Rettangolo();
+		
+		/* Avendo aggiunto alla classe 'Rettangolo' un costruttore deve essere modificata la sintassi della creazione
+		 * della nuova istanza oggetto
+		 */
+		Rettangolo r = new Rettangolo(0, 0, );   21:08
 		
 		/* Dopo questa istruzione l'oggetto istanza ' Rettangolo ' conosce l'oggetto istanza ' Punto ' */
 		r.setVertice(origine);	// Posso metterci anche 'unoZero' non cambierebbe nulla
