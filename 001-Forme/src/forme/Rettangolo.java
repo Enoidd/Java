@@ -49,4 +49,13 @@ public class Rettangolo {
 		verticeSx.setX(xVertice + deltaX);
 		verticeSx.setY(yVertice + deltaY);*/
 	}
+	
+	/* Metodi sovraccarichi */
+	public void scala(float fattore) {
+		this.scala(fattore, fattore);
+	}
+	public void scala(float fattoreBase, float fattoreAltezza) {
+		this.base *= fattoreBase;
+		this.altezza *= fattoreAltezza;
+	}
 }

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="000-Stampa/src"/>
+	<classpathentry kind="src" path="001-Forme/src"/>
+	<classpathentry kind="src" path="002-mainStanze/src"/>
+	<classpathentry kind="src" path="diadia/src"/>
+	<classpathentry kind="output" path="000-Stampa/bin"/>
+</classpath>
