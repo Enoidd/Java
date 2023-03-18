@@ -99,11 +99,11 @@ public class MainForme {
 		System.out.println("");
 		
 		
-		//ModificatoreDiPunti m = new ModificatoreDiPunti();
-		//Punto punto_qualsiasi = new Punto(1,1);
-		//m.azzera(punto_qualsiasi);
-		//System.out.println(punto_qualsiasi.getX());	// Stampa 0
-		//System.out.println(punto_qualsiasi.getY());	// Stampa 0
+		ModificatoreDiPunti m = new ModificatoreDiPunti();
+		Punto punto_qualsiasi = new Punto(1,1);
+		m.azzera(punto_qualsiasi);
+		System.out.println(punto_qualsiasi.getX());	// Stampa 0
+		System.out.println(punto_qualsiasi.getY());	// Stampa 0
 		
 		
 		System.out.println("");
