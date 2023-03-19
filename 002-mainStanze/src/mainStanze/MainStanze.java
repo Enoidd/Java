@@ -90,6 +90,25 @@ public class MainStanze {
 		n13.setStanzaAdiacente(null);	// significa che non possiede stanze adiacenti
 		//System.out.println(n13.getStanzaAdiacente().getNomeStanza());	// segnala l'errore NULLPOINTEREXCEPTION
 		
+
+		System.out.println("");
+		System.out.println("**** ARRAY ****");
+		Attrezzo[] attrezzi;
+		attrezzi = new Attrezzo[5];
+		
+		Attrezzo a = new Attrezzo("spada", 40);
+		System.out.println(a.toString());
+		Attrezzo b = new Attrezzo("scudo", 30);
+		System.out.println(b.toString());
+		attrezzi[0] = a;
+		System.out.println("attrezzi[0] = a -> " + attrezzi[0].toString());
+		attrezzi[1] = b;
+		System.out.println("attrezzi[1] = b -> " + attrezzi[1].toString());
+		a = b;
+		System.out.println("a = b -> " + a.toString());
+		
+		
+		
 	}
 
 }
