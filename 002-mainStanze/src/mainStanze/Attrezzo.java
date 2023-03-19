@@ -22,5 +22,9 @@ public class Attrezzo {
 		return peso;
 	}
 	
+	/* Metodo toString */
+	public String toString() {
+		return "Attrezzo di nome " + this.getNome() + ". Peso: " + this.getPeso();
+	}
 	
 }

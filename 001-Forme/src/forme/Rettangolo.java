@@ -7,11 +7,27 @@ public class Rettangolo {
 	private int altezza;
 	private Punto vertice;	// Posizione del vertice in alto a sx (di coordinate x, y)
 	
-	/* Costruttore */
-	public Rettangolo(int base, int altezza, Punto vertice) {
+	/* COSTRUTTORI SOVRACCARICHI */
+	
+	/* Costruttore generico */
+	public Rettangolo(Punto vertice, int base, int altezza) {
+		this.vertice = vertice;
 		this.base = base;
 		this.altezza = altezza;
-		this.vertice = vertice;
+	}
+	
+	/* Costruttore che ha come parametri base e altezza */
+	public Rettangolo(int base, int altezza) {
+		this.base = base;
+		this.altezza = altezza;
+		this.vertice = new Punto(0, 0);
+	}
+	
+	/* Costruttore no-args */
+	public Rettangolo() {
+		this.base = 0;
+		this.altezza = 0;
+		this.vertice = new Punto(0, 0);
 	}
 	
 	/* Metodi */

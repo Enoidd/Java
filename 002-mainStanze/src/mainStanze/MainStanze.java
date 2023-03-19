@@ -26,9 +26,13 @@ public class MainStanze {
 		
 		
 		System.out.println("Nome stanza: " + n11.getNomeStanza());
-		System.out.println("Attrezzo contenuto: " + n11.getAttrezzoContenuto().getNome());
-		System.out.println("Peso: " + n11.getAttrezzoContenuto().getPeso());
+		//System.out.println("Attrezzo contenuto: " + n11.getAttrezzoContenuto().getNome());
+		//System.out.println("Peso: " + n11.getAttrezzoContenuto().getPeso());
+		System.out.println(osso);	// vedi <<<--- Metodo toString in Attrezzo
 		
+		/* Stesso comportamento <<<<-- vedi sempre Metodo toString in Attrezzo */
+		String descrizione = "Attrezz contenuto: " + osso;
+		System.out.println(descrizione);
 		
 		/*****************************************************************************************************/
 		/* Si vuole stampare il valore delle variabili che contengono i riferimenti:

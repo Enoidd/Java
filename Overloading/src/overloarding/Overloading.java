@@ -1,4 +1,4 @@
-package overloarding;
+  package overloarding;
 
 public class Overloading {
 	
@@ -30,6 +30,11 @@ public class Overloading {
 	public double add(int a, double b) {
 		return a+b;
 	}
+	
+	/* NB:
+	 * L'operatore '+' è sovraccarico perché posso utilizzarlo sia per concatenare stringhe ad esempio, oppure
+	 * utilizzarlo per sommare due tipi numerici
+	 */
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

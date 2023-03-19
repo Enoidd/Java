@@ -62,7 +62,7 @@ public class MainForme {
 		/* Avendo aggiunto alla classe 'Rettangolo' un costruttore deve essere modificata la sintassi della creazione
 		 * della nuova istanza oggetto
 		 */
-		Rettangolo r = new Rettangolo(0, 0, unoZero);
+		Rettangolo r = new Rettangolo(unoZero, 0, 0);
 		
 		/* Dopo questa istruzione l'oggetto istanza ' Rettangolo ' conosce l'oggetto istanza ' Punto ' */
 		r.setVertice(origine);	// Posso metterci anche 'unoZero' non cambierebbe nulla
@@ -139,6 +139,18 @@ public class MainForme {
 		System.out.println(nome1.equals(nome2));	// Stampa 1 (TRUE)
 		
 		System.out.println(punto1.equals(punto2));
+		
+		
+		/* Esempi per costruttori sovraccarichi */
+		
+		// base 0, altezza 0, vertice in (0, 0)
+		Rettangolo r1 = new Rettangolo();
+		
+		// base 3, altezza 5, vertice in (0, 0)
+		Rettangolo r2 = new Rettangolo(3, 5);
+		
+		Punto ver = new Punto(4, 9);
+		Rettangolo r3 = new Rettangolo(ver, 3, 5);
 	}
 
 }
