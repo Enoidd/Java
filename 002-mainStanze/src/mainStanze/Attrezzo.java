@@ -5,6 +5,16 @@ public class Attrezzo {
 	private String nome;
 	private int peso;
 	
+	public Attrezzo(String nome, int peso){
+		this.nome = nome;
+		this.peso = peso;
+	}
+	
+	public Attrezzo() {
+		this.nome = nome;
+		this.peso = peso;
+	}
+	
 	/* Metodi */
 	public void setNome(String nomeAttrezzo) {
 		nome = nomeAttrezzo;
