@@ -19,7 +19,7 @@ public class Stanza {
 	
 	/* Metodi */
 	public void setNomeStanza(String nome) {
-		nomeStanza = nome;
+		this.nomeStanza = nome;
 	}
 	
 	public void setStanzaAdiacente(Stanza adiacente) {
@@ -74,15 +74,17 @@ public class Stanza {
 		return trovato;
 	}
 	
-	public void listaAttrezzi(String nomeStanza) {
+	public String listaAttrezzi() {
+		String stringa = null;
 		for(int i=0; i<numeroAttrezzi; i++) {
 			if(attrezzi[i]!=null) {
-				attrezzi[i].toString();
+				stringa = attrezzi[i].toString();
 			}
 		}
+		return stringa;
 	}
-	
+
 	public String toString() {
-		return "Stanza " + this.getNomeStanza() + ". Attrezzi: " + this.co
+		return "Stanza " + this.getNomeStanza() + ". " + this.listaAttrezzi();
 	}
 }

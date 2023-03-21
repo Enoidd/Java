@@ -126,7 +126,11 @@ public class MainStanze {
 		/* Voglio sapere se esiste un oggetto nella stanza */
 		System.out.println("Trovato: " + n15.hasAttrezzo("katana"));
 		
-		System.out.println("Attrezzo: " + n15.getAttrezzoContenuto("katana").getNome());
+		//System.out.println("Attrezzo: " + n15.getAttrezzoContenuto("katana").getNome());
+		//System.out.println("Attrezzo: " + n15.getAttrezzoContenuto("pugnale").getNome());
+		
+		System.out.println(""+ n15.toString());
+		
 	}
 
 }
