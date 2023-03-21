@@ -107,8 +107,26 @@ public class MainStanze {
 		a = b;
 		System.out.println("a = b -> " + a.toString());
 		
+		/* Creo una nuova stanza e metto dentro questa stanza 3 oggetti */
+		Stanza n15 = new Stanza();
+		n15.setNomeStanza("Aula N15");
 		
+		/* Creo tre attrezzi */
+		Attrezzo a1= new Attrezzo("sciabola", 20);
+		Attrezzo a2= new Attrezzo("pugnale", 26);
+		Attrezzo a3= new Attrezzo("katana", 21);
 		
+		/* Metto dentro la stanza i 3 attrezzi creati */
+		n15.addAttrezzo(a1);
+		n15.addAttrezzo(a2);
+		n15.addAttrezzo(a3);
+		
+		System.out.println("");
+		System.out.println("");
+		/* Voglio sapere se esiste un oggetto nella stanza */
+		System.out.println("Trovato: " + n15.hasAttrezzo("katana"));
+		
+		System.out.println("Attrezzo: " + n15.getAttrezzoContenuto("katana").getNome());
 	}
 
 }
