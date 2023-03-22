@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /**
  * Classe principale di diadia, un semplice gioco di ruolo ambientato al dia.
- * Per giocare crea un'istanza di questa classe e invoca il letodo gioca
+ * Per giocare crea un'istanza di questa classe e invoca il metodo gioca
  *
  * Questa e' la classe principale crea e istanzia tutte le altre
  *
@@ -15,7 +15,7 @@ import java.util.Scanner;
  */
 
 public class DiaDia {
-
+	
 	static final private String MESSAGGIO_BENVENUTO = ""+
 			"Ti trovi nell'Universita', ma oggi e' diversa dal solito...\n" +
 			"Meglio andare al piu' presto in biblioteca a studiare. Ma dov'e'?\n"+
@@ -29,8 +29,8 @@ public class DiaDia {
 	static final private String[] elencoComandi = {"vai", "aiuto", "fine"};
 
 	private Partita partita;
-
-	public DiaDia() {
+	
+	public DiaDia() {	// Creo una nuova partita
 		this.partita = new Partita();
 	}
 
@@ -54,12 +54,12 @@ public class DiaDia {
 	private boolean processaIstruzione(String istruzione) {
 		Comando comandoDaEseguire = new Comando(istruzione);
 
-		if (comandoDaEseguire.getNome().equals("fine")) {
+		if (comandoDaEseguire.getNome().equals("fine")) {	// Se il comando da eseguire è "fine"
 			this.fine(); 
 			return true;
-		} else if (comandoDaEseguire.getNome().equals("vai"))
+		} else if (comandoDaEseguire.getNome().equals("vai"))	// Se il comando è "vai"
 			this.vai(comandoDaEseguire.getParametro());
-		else if (comandoDaEseguire.getNome().equals("aiuto"))
+		else if (comandoDaEseguire.getNome().equals("aiuto"))	// Se il comando è "aiuto"
 			this.aiuto();
 		else
 			System.out.println("Comando sconosciuto");

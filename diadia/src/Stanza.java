@@ -64,6 +64,7 @@ public class Stanza {
      */
 	public Stanza getStanzaAdiacente(String direzione) {
         Stanza stanza = null;
+		//Stanza stanza = new Stanza(direzione);	// <<<<<----- MIA
 		for(int i=0; i<this.numeroStanzeAdiacenti; i++)
         	if (this.direzioni[i].equals(direzione))
         		stanza = this.stanzeAdiacenti[i];
@@ -145,7 +146,7 @@ public class Stanza {
 
 	/**
      * Restituisce l'attrezzo nomeAttrezzo se presente nella stanza.
-	 * @param nomeAttrezzo
+	 * @param nomeAttrezzogioca
 	 * @return l'attrezzo presente nella stanza.
      * 		   null se l'attrezzo non e' presente.
 	 */

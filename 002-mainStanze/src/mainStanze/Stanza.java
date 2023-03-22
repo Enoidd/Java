@@ -73,18 +73,19 @@ public class Stanza {
 		}
 		return trovato;
 	}
+
 	
-	public String listaAttrezzi() {
-		String stringa = null;
+	public String toString() {
+		String stringa = "";
+		
+		stringa += "Stanza " + this.getNomeStanza() + '\n';
+		
 		for(int i=0; i<numeroAttrezzi; i++) {
 			if(attrezzi[i]!=null) {
-				stringa = attrezzi[i].toString();
+				stringa += attrezzi[i].toString();
+				stringa += '\n';
 			}
 		}
 		return stringa;
-	}
-
-	public String toString() {
-		return "Stanza " + this.getNomeStanza() + ". " + this.listaAttrezzi();
 	}
 }
