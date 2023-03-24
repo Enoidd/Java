@@ -64,7 +64,6 @@ public class Stanza {
      */
 	public Stanza getStanzaAdiacente(String direzione) {
         Stanza stanza = null;
-		//Stanza stanza = new Stanza(direzione);	// <<<<<----- MIA
 		for(int i=0; i<this.numeroStanzeAdiacenti; i++)
         	if (this.direzioni[i].equals(direzione))
         		stanza = this.stanzeAdiacenti[i];
@@ -125,7 +124,8 @@ public class Stanza {
     			risultato.append(" " + direzione);
     	risultato.append("\nAttrezzi nella stanza: ");
     	for (Attrezzo attrezzo : this.attrezzi) {
-    		risultato.append(attrezzo.toString()+" ");
+    		if(attrezzo!=null) // <<<<<--- MANCAVA IL CONTROLLO
+    			risultato.append(attrezzo.toString()+" ");
     	}
     	return risultato.toString();
     }

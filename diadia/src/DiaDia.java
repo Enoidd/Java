@@ -23,7 +23,7 @@ public class DiaDia {
 			"alcuni amici, altri... chissa!\n"+
 			"Ci sono attrezzi che potrebbero servirti nell'impresa:\n"+
 			"puoi raccoglierli, usarli, posarli quando ti sembrano inutili\n" +
-			"o regalarli se pensi che possano ingraziarti qualcuno.\n\n"+
+			"o regalarli se pensi che possano ringraziarti qualcuno.\n\n"+
 			"Per conoscere le istruzioni usa il comando 'aiuto'.";
 	
 	static final private String[] elencoComandi = {"vai", "aiuto", "fine"};
@@ -89,6 +89,7 @@ public class DiaDia {
 		if(direzione==null)
 			System.out.println("Dove vuoi andare ?");
 		Stanza prossimaStanza = null;
+		//prossimaStanza = this.partita.getStanzaCorrente().getStanzaAdiacente(direzione);
 		prossimaStanza = this.partita.getStanzaCorrente().getStanzaAdiacente(direzione);
 		if (prossimaStanza == null)
 			System.out.println("Direzione inesistente");
