@@ -43,17 +43,26 @@ public class Borsa {
 			peso += this.attrezzi[i].getPeso();
 		return peso;
 	}
+	
 	public boolean isEmpty() {
 		return this.numeroAttrezzi == 0;
 	}
+	
 	public boolean hasAttrezzo(String nomeAttrezzo) {
 		return this.getAttrezzo(nomeAttrezzo)!=null;
 	}
+	
 	public Attrezzo removeAttrezzo(String nomeAttrezzo) {
 		Attrezzo a = null;
-		// ---> TODO (implementare questo metodo) <---
+		for(Attrezzo attrezzo : this.attrezzi) {
+			if(attrezzo!=null) {
+				if(a.getNome().equals(nomeAttrezzo))
+					a = attrezzo;
+			}
+		}
 		return a;
 	}
+		
 	public String toString() {
 		StringBuilder s = new StringBuilder();
 		if (!this.isEmpty()) {
@@ -67,4 +76,3 @@ public class Borsa {
 	}
 }
 
-}

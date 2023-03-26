@@ -26,7 +26,7 @@ public class DiaDia {
 			"o regalarli se pensi che possano ringraziarti qualcuno.\n\n"+
 			"Per conoscere le istruzioni usa il comando 'aiuto'.";
 	
-	static final private String[] elencoComandi = {"vai", "aiuto", "fine"};
+	static final private String[] elencoComandi = {"vai", "aiuto", "fine", "prendi", "posa"};
 
 	private Partita partita;
 	
@@ -61,6 +61,11 @@ public class DiaDia {
 			this.vai(comandoDaEseguire.getParametro());
 		else if (comandoDaEseguire.getNome().equals("aiuto"))	// Se il comando è "aiuto"
 			this.aiuto();
+		else if (comandoDaEseguire.getNome().equals("prendi"))
+			this.prendi(comandoDaEseguire.getParametro());
+		else if (comandoDaEseguire.getNome().equals("posa"))
+			this.posa(comandoDaEseguire.getParametro());
+		
 		else
 			System.out.println("Comando sconosciuto");
 		if (this.partita.vinta()) {
@@ -100,7 +105,25 @@ public class DiaDia {
 		}
 		System.out.println(partita.getStanzaCorrente().getDescrizione());
 	}
-
+	
+	/**
+	 * Comando "Prendi".
+	 */
+	private void prendi(String nomeAttrezzo) {
+		Attrezzo attrezzoInStanza = this.partita.getLabirinto().getStanzaCorrente().getAttrezzo(nomeAttrezzo);
+		this.partita.getGiocatore().getBorsa().addAttrezzo(attrezzoInStanza);
+		this.partita.getLabirinto().getStanzaCorrente().removeAttrezzo(attrezzoInStanza);
+	}
+	
+	/**
+	 * Comando "Posa".
+	 */
+	private void posa(String nomeAttrezzo) {
+		Attrezzo attrezzoInBorsa = this.partita.getGiocatore().getBorsa().getAttrezzo(nomeAttrezzo);
+		this.partita.getLabirinto().getStanzaCorrente().addAttrezzo(attrezzoInBorsa);
+		this.partita.getGiocatore().getBorsa().removeAttrezzo(nomeAttrezzo);
+	}
+	
 	/**
 	 * Comando "Fine".
 	 */

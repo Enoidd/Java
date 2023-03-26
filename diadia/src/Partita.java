@@ -101,7 +101,21 @@ public class Partita {
 	public void setFinita() {
 		this.finita = true;
 	}
+	
+	/**
+	 * Il giocatore della partita
+	 */
+	public Giocatore getGiocatore() {
+		return this.NuovoGiocatore;
+	}
 
+	/**
+	 * La partita
+	 */
+	public Labirinto getLabirinto() {
+		return this.NuovoLabirinto;
+	}
+	
 	//public int getCfu() {
 		//return this.cfu;
 	//}
