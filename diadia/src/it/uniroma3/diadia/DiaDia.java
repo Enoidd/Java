@@ -1,4 +1,8 @@
-
+package it.uniroma3.diadia;
+import it.uniroma3.diadia.ambienti.Labirinto;
+import it.uniroma3.diadia.ambienti.Stanza;
+import it.uniroma3.diadia.attrezzi.Attrezzo;
+import it.uniroma3.diadia.IOConsole.IOConsole;
 
 import java.util.Scanner;
 
@@ -29,9 +33,11 @@ public class DiaDia {
 	static final private String[] elencoComandi = {"vai", "aiuto", "fine", "prendi", "posa"};
 
 	private Partita partita;
+	private IOConsole IoConsole;
 	
-	public DiaDia() {	// Creo una nuova partita
-		this.partita = new Partita();
+	public DiaDia() {
+		this.partita = new Partita(); // Creo una nuova partita
+		this.IoConsole = new IOConsole();
 	}
 
 	public void gioca() {
@@ -92,18 +98,25 @@ public class DiaDia {
 	 */
 	private void vai(String direzione) {
 		if(direzione==null)
-			System.out.println("Dove vuoi andare ?");
+			/*System.out.println("Dove vuoi andare ?");*/
+			IoConsole.mostraMessaggio("Dove vuoi andare?");
 		Stanza prossimaStanza = null;
 		//prossimaStanza = this.partita.getStanzaCorrente().getStanzaAdiacente(direzione);
-		prossimaStanza = this.partita.getStanzaCorrente().getStanzaAdiacente(direzione);
+		prossimaStanza = this.partita.getLabirinto().getStanzaCorrente().getStanzaAdiacente(direzione);
 		if (prossimaStanza == null)
-			System.out.println("Direzione inesistente");
+			/*System.out.println("Direzione inesistente");*/
+			IoConsole.mostraMessaggio("Direzione inesistente");
 		else {
-			this.partita.setStanzaCorrente(prossimaStanza);
-			int cfu = this.partita.getCfu();
-			this.partita.setCfu(cfu--);
+			//this.partita.setStanzaCorrente(prossimaStanza);
+			this.partita.getLabirinto().setStanzaCorrente(prossimaStanza);
+			//int cfu = this.partita.getCfu();
+			int cfu = this.partita.getGiocatore().getCfu();
+			//this.partita.setCfu(cfu--);
+			this.partita.getGiocatore().setCfu(cfu--);
 		}
-		System.out.println(partita.getStanzaCorrente().getDescrizione());
+		//System.out.println(partita.getStanzaCorrente().getDescrizione());
+		//System.out.println(partita.getLabirinto().getStanzaCorrente().getDescrizione());
+		IoConsole.
 	}
 	
 	/**

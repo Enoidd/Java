@@ -1,4 +1,7 @@
-
+package it.uniroma3.diadia;
+import it.uniroma3.diadia.ambienti.Labirinto;
+import it.uniroma3.diadia.ambienti.Stanza;
+import it.uniroma3.diadia.giocatore.Giocatore;
 
 
 /**
@@ -16,13 +19,13 @@ public class Partita {
 	private Giocatore NuovoGiocatore;
 	//private Stanza stanzaCorrente;
 	//private Stanza stanzaVincente;
-	//private boolean finita;
+	private boolean finita;
 	//private int cfu;
 	
 	public Partita(){
 		this.NuovoLabirinto = new Labirinto();
 		this.NuovoGiocatore = new Giocatore();
-		creaStanze();
+		NuovoLabirinto.creaStanze();
 		this.finita = false;
 		//this.cfu = CFU_INIZIALI;
 	}
@@ -83,7 +86,7 @@ public class Partita {
 	 * @return vero se partita vinta
 	 */
 	public boolean vinta() {
-		return this.getStanzaCorrente() == this.getStanzaVincente();
+		return this.NuovoLabirinto.getStanzaCorrente() == this.NuovoLabirinto.getStanzaVincente();
 	}
 
 	/**
@@ -91,7 +94,7 @@ public class Partita {
 	 * @return vero se partita finita
 	 */
 	public boolean isFinita() {
-		return finita || vinta() || (cfu == 0);
+		return finita || vinta() || (this.NuovoGiocatore.getCfu() == 0);
 	}
 
 	/**
@@ -104,16 +107,34 @@ public class Partita {
 	
 	/**
 	 * Il giocatore della partita
+	 * @return NuovoGiocatore, è il giocatore della partita
 	 */
 	public Giocatore getGiocatore() {
 		return this.NuovoGiocatore;
 	}
+	
+	/**
+	 * Setta il giocatore della partita
+	 * @param NuovoGiocatore, imposta il giocatore
+	 */
+	public void setGiocatore(Giocatore NuovoGiocatore) {
+		this.NuovoGiocatore = NuovoGiocatore;
+	}
 
 	/**
 	 * La partita
+	 * @return NuovoLabirinto
 	 */
 	public Labirinto getLabirinto() {
 		return this.NuovoLabirinto;
+	}
+	
+	/**
+	 * Setta il labirinto 
+	 * @param NuovoLabirinto, imposta il labirinto
+	 */
+	public void setLabirinto(Labirinto NuovoLabirinto) {
+		this.NuovoLabirinto = NuovoLabirinto;
 	}
 	
 	//public int getCfu() {

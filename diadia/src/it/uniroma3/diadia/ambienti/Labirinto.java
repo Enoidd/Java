@@ -1,14 +1,16 @@
+package it.uniroma3.diadia.ambienti;
+import it.uniroma3.diadia.attrezzi.Attrezzo;
+
 
 public class Labirinto {
 	/* Variabili di istanza */
 	private Stanza stanzaCorrente;
 	private Stanza stanzaVincente;
-	private boolean finita;
 	
 	 /**
      * Crea tutte le stanze e le porte di collegamento
      */
-    private void creaStanze() {
+    public void creaStanze() {
 
 		/* crea gli attrezzi */
     	Attrezzo lanterna = new Attrezzo("lanterna",3);

@@ -1,5 +1,6 @@
-
-
+package it.uniroma3.diadia.ambienti;
+import it.uniroma3.diadia.attrezzi.Attrezzo;
+import it.uniroma3.diadia.IOConsole.IOConsole;
 
 /**
  * Classe Stanza - una stanza in un gioco di ruolo.
@@ -23,6 +24,7 @@ public class Stanza {
     private Stanza[] stanzeAdiacenti;
     private int numeroStanzeAdiacenti;
 	private String[] direzioni;
+	private IOConsole IoConsole;
     
     /**
      * Crea una stanza. Non ci sono stanze adiacenti, non ci sono attrezzi.
@@ -35,6 +37,7 @@ public class Stanza {
         this.direzioni = new String[NUMERO_MASSIMO_DIREZIONI];
         this.stanzeAdiacenti = new Stanza[NUMERO_MASSIMO_DIREZIONI];
         this.attrezzi = new Attrezzo[NUMERO_MASSIMO_ATTREZZI];
+        this.IoConsole = new IOConsole();
     }
 
     /**
@@ -167,10 +170,11 @@ public class Stanza {
 	 */
 	public boolean removeAttrezzo(Attrezzo attrezzo) {
 		for(int i=0; i<numeroAttrezzi; i++) {
-			if(attrezzi[i].getNome().equals(attrezzo.getNome())) {	// fare controllo anche con ==
+			if(attrezzi[i].getNome().equals(attrezzo.getNome())) {	// CURIOSITA' fare controllo anche con == per vedere che stampa
 				attrezzi[i] = null;
 				this.numeroAttrezzi--;
-				System.out.println("Attrezzo rimosso.");	// Print di prova
+				//System.out.println("Attrezzo rimosso.");
+				IoConsole.mostraMessaggio("Attrezzo rimosso.");	// Print di prova
 				return true;
 			}
 		}
