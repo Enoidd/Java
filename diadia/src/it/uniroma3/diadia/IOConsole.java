@@ -19,6 +19,6 @@ public class IOConsole {
 		Scanner scannerDiLinee = new Scanner(System.in);
 		String riga = scannerDiLinee.nextLine();
 		//scannerDiLinee.close();
-		return riga;
+		return riga;	// Di tipo String
 	}
 }

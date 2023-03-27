@@ -1,5 +1,4 @@
 package it.uniroma3.diadia;
-import it.uniroma3.diadia.ambienti.Labirinto;
 import it.uniroma3.diadia.ambienti.Stanza;
 import it.uniroma3.diadia.attrezzi.Attrezzo;
 
@@ -35,6 +34,7 @@ public class DiaDia {
 	private Partita partita;
 	private IOConsole console;
 	
+	/* Costruttore */
 	public DiaDia(IOConsole IoConsole) {
 		this.partita = new Partita(); // Creo una nuova partita
 		this.console = IoConsole;
@@ -42,12 +42,14 @@ public class DiaDia {
 
 	public void gioca() {
 		String istruzione; 
-		Scanner scannerDiLinee;
+		//Scanner scannerDiLinee;
 
-		System.out.println(MESSAGGIO_BENVENUTO);
-		scannerDiLinee = new Scanner(System.in);	// da warning perché il metodo scanner andrebbe chiuso, si chiude in automatico quando il metodo finisce	
+		//System.out.println(MESSAGGIO_BENVENUTO);
+		console.mostraMessaggio(MESSAGGIO_BENVENUTO);
+		//scannerDiLinee = new Scanner(System.in);	// da warning perché il metodo scanner andrebbe chiuso, si chiude in automatico quando il metodo finisce	
 		do		
-			istruzione = scannerDiLinee.nextLine();
+			/*istruzione = scannerDiLinee.nextLine();*/
+			istruzione = console.leggiRiga();
 		while (!processaIstruzione(istruzione));
 	}   
 
@@ -59,7 +61,8 @@ public class DiaDia {
 	 */
 	private boolean processaIstruzione(String istruzione) {
 		Comando comandoDaEseguire = new Comando(istruzione);
-
+		//if (comandoDaEseguire.getNome()==null)
+			//return false;
 		if (comandoDaEseguire.getNome().equals("fine")) {	// Se il comando da eseguire è "fine"
 			this.fine(); 
 			return true;
@@ -90,8 +93,10 @@ public class DiaDia {
 	 */
 	private void aiuto() {
 		for(int i=0; i< elencoComandi.length; i++) 
-			System.out.print(elencoComandi[i]+" ");
-		System.out.println();
+			//System.out.println(elencoComandi[i]+" ");
+			console.mostraMessaggio(elencoComandi[i] + " ");
+		/*System.out.println();*/
+		console.mostraMessaggio("");
 	}
 
 	/**
