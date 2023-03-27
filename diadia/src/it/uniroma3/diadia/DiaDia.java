@@ -2,9 +2,9 @@ package it.uniroma3.diadia;
 import it.uniroma3.diadia.ambienti.Labirinto;
 import it.uniroma3.diadia.ambienti.Stanza;
 import it.uniroma3.diadia.attrezzi.Attrezzo;
-import it.uniroma3.diadia.IOConsole.IOConsole;
 
 import java.util.Scanner;
+
 
 /**
  * Classe principale di diadia, un semplice gioco di ruolo ambientato al dia.
@@ -33,11 +33,11 @@ public class DiaDia {
 	static final private String[] elencoComandi = {"vai", "aiuto", "fine", "prendi", "posa"};
 
 	private Partita partita;
-	private IOConsole IoConsole;
+	private IOConsole console;
 	
-	public DiaDia() {
+	public DiaDia(IOConsole IoConsole) {
 		this.partita = new Partita(); // Creo una nuova partita
-		this.IoConsole = new IOConsole();
+		this.console = IoConsole;
 	}
 
 	public void gioca() {
@@ -73,9 +73,11 @@ public class DiaDia {
 			this.posa(comandoDaEseguire.getParametro());
 		
 		else
-			System.out.println("Comando sconosciuto");
+			//System.out.println("Comando sconosciuto");
+			console.mostraMessaggio("Comando sconosciuto");
 		if (this.partita.vinta()) {
-			System.out.println("Hai vinto!");
+			//System.out.println("Hai vinto!");
+			console.mostraMessaggio("Hai vinto!");
 			return true;
 		} else
 			return false;
@@ -99,13 +101,13 @@ public class DiaDia {
 	private void vai(String direzione) {
 		if(direzione==null)
 			/*System.out.println("Dove vuoi andare ?");*/
-			IoConsole.mostraMessaggio("Dove vuoi andare?");
+			console.mostraMessaggio("Dove vuoi andare?");
 		Stanza prossimaStanza = null;
 		//prossimaStanza = this.partita.getStanzaCorrente().getStanzaAdiacente(direzione);
 		prossimaStanza = this.partita.getLabirinto().getStanzaCorrente().getStanzaAdiacente(direzione);
 		if (prossimaStanza == null)
 			/*System.out.println("Direzione inesistente");*/
-			IoConsole.mostraMessaggio("Direzione inesistente");
+			console.mostraMessaggio("Direzione inesistente");
 		else {
 			//this.partita.setStanzaCorrente(prossimaStanza);
 			this.partita.getLabirinto().setStanzaCorrente(prossimaStanza);
@@ -116,7 +118,9 @@ public class DiaDia {
 		}
 		//System.out.println(partita.getStanzaCorrente().getDescrizione());
 		//System.out.println(partita.getLabirinto().getStanzaCorrente().getDescrizione());
-		IoConsole.
+		console.mostraMessaggio(" " + partita.getLabirinto().getStanzaCorrente().getDescrizione());
+		//IoConsole.mostraMessaggio(partita.getGiocatore().getBorsa().toString() + " ");
+		
 	}
 	
 	/**
@@ -141,11 +145,13 @@ public class DiaDia {
 	 * Comando "Fine".
 	 */
 	private void fine() {
-		System.out.println("Grazie di aver giocato!");  // si desidera smettere
+		/*System.out.println("Grazie di aver giocato!");  // si desidera smettere */
+		console.mostraMessaggio("Grazie per aver giocato!");
 	}
 
 	public static void main(String[] argc) {
-		DiaDia gioco = new DiaDia();
+		IOConsole IoConsole = new IOConsole();
+		DiaDia gioco = new DiaDia(IoConsole);
 		gioco.gioca();
 	}
 }
