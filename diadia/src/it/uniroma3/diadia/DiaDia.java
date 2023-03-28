@@ -134,7 +134,9 @@ public class DiaDia {
 	private void prendi(String nomeAttrezzo) {
 		Attrezzo attrezzoInStanza = this.partita.getLabirinto().getStanzaCorrente().getAttrezzo(nomeAttrezzo);
 		this.partita.getGiocatore().getBorsa().addAttrezzo(attrezzoInStanza);
+		console.mostraMessaggio(this.partita.getGiocatore().getBorsa().toString());
 		this.partita.getLabirinto().getStanzaCorrente().removeAttrezzo(attrezzoInStanza);
+		//System.out.println("Rimosso da stanza");
 	}
 	
 	/**
