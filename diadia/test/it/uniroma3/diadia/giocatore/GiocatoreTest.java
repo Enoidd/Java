@@ -1,8 +1,6 @@
 package it.uniroma3.diadia.giocatore;
 
 import static org.junit.Assert.*;
-import static org.junit.Assert.assertNull;
-
 
 import org.junit.Test;
 
