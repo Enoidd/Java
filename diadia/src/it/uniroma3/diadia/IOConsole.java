@@ -16,7 +16,7 @@ public class IOConsole {
 	 * @return riga, "riga" è l'input passato
 	 */
 	public String leggiRiga() {
-		Scanner scannerDiLinee = new Scanner(System.in);
+		Scanner scannerDiLinee = new Scanner(System.in);	// da warning perché scanner non è chiuso (è commentato sotto)
 		String riga = scannerDiLinee.nextLine();
 		//scannerDiLinee.close();
 		return riga;	// Di tipo String

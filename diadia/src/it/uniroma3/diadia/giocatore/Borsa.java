@@ -8,16 +8,30 @@ public class Borsa {
 	private int numeroAttrezzi;
 	private int pesoMax;
 
+	/**
+	 * Crea una borsa 
+	 * @param no-args
+	 */
 	public Borsa() {
 		this(DEFAULT_PESO_MAX_BORSA);
 	}
 
+	/**
+	 * Crea una borsa
+	 * @param pesoMax che identifica il peso massimo che la borsa può contenere
+	 */
 	public Borsa(int pesoMax) {
 		this.pesoMax = pesoMax;
 		this.attrezzi = new Attrezzo[10]; // speriamo bastino...
 		this.numeroAttrezzi = 0;
 	}
 
+	/**
+	 * Metodo che aggiunge un attrezzo nella borsa, fintanto che c'è spazio in 
+	 * termini di peso.
+	 * @param attrezzo che viene inserito nella borsa
+	 * @return true / false se l'attrezzo è stato inserito
+	 */
 	public boolean addAttrezzo(Attrezzo attrezzo) {
 		if (this.getPeso() + attrezzo.getPeso() > this.getPesoMax())
 			return false;
@@ -28,10 +42,20 @@ public class Borsa {
 		return true;
 	}
 
+	/**
+	 * Metodo che restituisce il peso massimo della borsa
+	 * @return pesoMax 
+	 */
 	public int getPesoMax() {
 		return pesoMax;
 	}
 
+	/**
+	 * Metodo che restituisce il nome dell'attrezzo cercato nella borsa
+	 * se questo esiste
+	 * @param nomeAttrezzo da cercare nella borsa
+	 * @return a, l'attrezzo trovato nella borsa, null altrimenti
+	 */
 	public Attrezzo getAttrezzo(String nomeAttrezzo) {
 		Attrezzo a = null;
 		for (int i= 0; i<this.numeroAttrezzi; i++)
@@ -41,6 +65,10 @@ public class Borsa {
 		return a;
 	}
 
+	/**
+	 * Metodo che restituisce il peso corrente della borsa
+	 * @return peso
+	 */
 	public int getPeso() {
 		int peso = 0;
 		for (int i= 0; i<this.numeroAttrezzi; i++)
@@ -49,14 +77,28 @@ public class Borsa {
 		return peso;
 	}
 	
+	/**
+	 * Metodo che controlla se la borsa è vuota
+	 * @return true / false 
+	 */
 	public boolean isEmpty() {
 		return this.numeroAttrezzi == 0;
 	}
 	
+	/**
+	 * Metodo che cerca se un attrezzo è nella borsa
+	 * @param nomeAttrezzo attrezzo che si ricerca
+	 * @return true / false se esiste in borsa
+	 */
 	public boolean hasAttrezzo(String nomeAttrezzo) {
 		return this.getAttrezzo(nomeAttrezzo)!=null;
 	}
 	
+	/**
+	 * Metodo che rimuove l'attrezzo inserito per nome dalla borsa
+	 * @param nomeAttrezzo
+	 * @return a l'attrezzo rimosso,null altrimenti
+	 */
 	public Attrezzo removeAttrezzo(String nomeAttrezzo) {
 		Attrezzo a = null;
 		for(int i=0; i<numeroAttrezzi; i++) {
@@ -68,7 +110,10 @@ public class Borsa {
 		}
 		return a;
 	}
-		
+	
+	/**
+	 * Metodo che mostra la descrizione dell'attrezzo 
+	 */
 	public String toString() {
 		StringBuilder s = new StringBuilder();
 		if (!this.isEmpty()) {

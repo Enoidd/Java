@@ -40,6 +40,9 @@ public class DiaDia {
 		this.console = IoConsole;
 	}
 
+	/**
+	 * Processa il comando: I/O
+	 */
 	public void gioca() {
 		String istruzione; 
 		//Scanner scannerDiLinee;

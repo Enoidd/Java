@@ -32,14 +32,26 @@ public class Comando {
 			this.parametro = scannerDiParole.next();
     }
 
+    /**
+     * Ritorna il nome del comando inserito
+     * @return nome
+     */
     public String getNome() {
         return this.nome;
     }
 
+    /**
+     * Ritorna il nome del parametro inserito
+     * @return parametro, è il parametro, es. {nord, sud, est ovest} etc..
+     */
     public String getParametro() {
         return this.parametro;
     }
 
+    /**
+     * Verifica se il nome è null
+     * @return null
+     */
     public boolean sconosciuto() {
         return (this.nome == null);
     }

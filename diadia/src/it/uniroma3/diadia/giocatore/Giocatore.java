@@ -12,18 +12,34 @@ public class Giocatore {
 		this.borsa = new Borsa();	// il giocatore ha una borsa
 	}
 	
+	/**
+	 * Metodo per i cfu correnti del giocatore
+	 * @return cfu del giocatore
+	 */
 	public int getCfu() {
 		return this.cfu;
 	}
 
+	/**
+	 * Metodo che imposta i cfu del giocatore
+	 * @param cfu
+	 */
 	public void setCfu(int cfu) {
 		this.cfu = cfu;		
 	}
 	
+	/**
+	 * Metodo per la borsa corrente
+	 * @return borsa
+	 */
 	public Borsa getBorsa() {
 		return this.borsa;
 	}
 	
+	/**
+	 * Metodo che imposta la borsa 
+	 * @param AttrezzoBorsa
+	 */
 	public void setBorsa(Borsa AttrezzoBorsa) {
 		this.borsa = AttrezzoBorsa;
 	}
