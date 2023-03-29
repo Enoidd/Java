@@ -1,12 +1,10 @@
 package it.uniroma3.diadia.ambienti;
 import it.uniroma3.diadia.attrezzi.Attrezzo;
-import it.uniroma3.diadia.ambienti.Stanza;
 
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNull;
 import org.junit.Test;
-import org.junit.Before;
 
 public class StanzaTest {
 	/* Stato iniziale pronto */
