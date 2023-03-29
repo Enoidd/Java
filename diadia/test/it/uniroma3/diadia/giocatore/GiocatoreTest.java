@@ -21,4 +21,4 @@ public class GiocatoreTest {
 	public void testGetBorsa() {
 		assertNotNull(testGiocatore.getBorsa());
 	}
-}
+} 
