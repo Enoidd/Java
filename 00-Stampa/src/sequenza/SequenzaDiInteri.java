@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 package sequenza;
+=======
+**package sequenza;
+>>>>>>> branch 'master' of https://github.com/Enoidd/Java.git
 
 public class SequenzaDiInteri {
 
