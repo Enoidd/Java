@@ -1,4 +1,4 @@
-package forme;
+...package forme;
 
 public class MainForme {
 	
