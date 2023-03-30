@@ -1,5 +1,5 @@
 package forme;
-
+/* ciao */
 public class MainForme {
 	
 	/* ' main ' è un metodo */
