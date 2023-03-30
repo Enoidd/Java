@@ -1,4 +1,4 @@
-**package sequenza;
+package sequenza;
 
 public class SequenzaDiInteri {
 
