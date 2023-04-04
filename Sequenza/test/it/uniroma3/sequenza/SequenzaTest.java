@@ -1,5 +1,5 @@
 package it.uniroma3.sequenza;
-
+/**/
 import static org.junit.Assert.*;
 
 import org.junit.Test;
