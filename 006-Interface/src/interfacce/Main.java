@@ -71,6 +71,8 @@ public class Main {
 		 *     es. 'accorda()' non è tra i metodi di 'Strumento' (tipo statico della variabile locale 'strumento1').
 		 */
 		
+			/* slide 34 */
+		
 	}
 
 }
