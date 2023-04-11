@@ -1,7 +1,7 @@
 package main;
 
-import musicista.Musicista;
-import strumento.Strumento;
+import interfacce.Musicista;
+import interfacce.Strumento;
 
 
 public class Main {
