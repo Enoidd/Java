@@ -5,8 +5,8 @@ package interfacce;
  * 'Strumento'. Questo significa che gli oggetti 'Tamburo', sono in grado di offrire i metodi del tipo
  * 'Strumento'
  */
-public class Tamburo {
-	
+public class Tamburo implements Strumento{
+	/* Descrizione */
 	public void produciSuono() {
 		System.out.println("bum-bum-bum");
 	}

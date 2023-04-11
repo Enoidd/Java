@@ -5,14 +5,14 @@ package interfacce;
 /* 'Chitarra' implementa l'interfaccia 'Strumento', questo implica che 'Chitarra' è sotto tipo di 'Strumento',
  * meglio dire che 'Strumento' è supertipo di 'Chitarra'
  */
-public class Chitarra {
+public class Chitarra implements Strumento{
 	/* Variabili di istanza */
 	private int[] corde;
 	/* Costruttore */
 	public Chitarra() {
 		corde = new int[6];
 	}
-	
+	/* Descrizione */
 	public void produciSuono() {
 		System.out.println("dlen-dlen-dlen");
 	}

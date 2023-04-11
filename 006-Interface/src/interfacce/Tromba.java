@@ -5,7 +5,7 @@ package interfacce;
  * meglio dire che 'Strumento' è supertipo di 'Tromba'
  */
 public class Tromba implements Strumento{
-	
+	/* Descrizione */
 	public void produciSuono() {
 		System.out.println("pe-pe-re-pe-pe");
 	}
