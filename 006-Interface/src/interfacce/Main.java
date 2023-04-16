@@ -19,7 +19,7 @@ public class Main {
 		Chitarra c = new Chitarra();
 		Strumento t = new Tamburo();	// 'Tamburo' è sotto tipo di 'Strumento' che è supertipo di 'Tamburo'
 		ludovico.suona(c);	// Ludovico suona il parametro passato che è la 'Chitarra'
-		ludovico.suona(t); 	// Ludovico suona il parametro passato che è la 'Tromba'
+		ludovico.suona(t); 	// Ludovico suona il parametro passato che è la 'Tamburo'
 		
 		/*************************/
 		
@@ -37,6 +37,8 @@ public class Main {
 		/* In sostanza è l'equivalente di:
 		 * Strumento nome_strumento = new Chitarra();
 		 */
+		ludovico.suona(strumento);
+		ludovico.suona(chitarra);
 		
 		/**************************/
 		
