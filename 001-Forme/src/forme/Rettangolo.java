@@ -57,7 +57,7 @@ public class Rettangolo implements Forma {
 	}
 	
 	/* Metodo 'sposta' della classe 'Rettangolo' */
-	public void sposta(int deltaX, int deltaY) {
+	public void trasla(int deltaX, int deltaY) {
 		vertice.trasla(deltaX, deltaY);
 		
 		/* Nel caso in cui la classe 'Punto' non disponesse di un metodo 'trasla' */
@@ -75,4 +75,5 @@ public class Rettangolo implements Forma {
 		this.base *= fattoreBase;
 		this.altezza *= fattoreAltezza;
 	}
+
 }

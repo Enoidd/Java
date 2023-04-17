@@ -76,7 +76,7 @@ public class MainForme {
 		System.out.println("Vertice del rettangolo (x,y): " + r.getVertice().getX() + "," + r.getVertice().getY());
 		
 		/* Richiamo dei metodi sull'istanza ' r ' di tipo Rettangolo per spostare sull'asse delle X il rettangolo */
-		r.sposta(+2, +3);
+		r.trasla(+2, +3);
 		System.out.println("Vertice del rettangolo spostato (+2, +3) (x,y): " + r.getVertice().getX() + "," + r.getVertice().getY());
 
 		System.out.println("");
