@@ -1,9 +1,0 @@
-/**
- * 
- */
-/**
- * @author scard
- *
- */
-module Forme {
-}

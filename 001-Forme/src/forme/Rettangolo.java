@@ -1,6 +1,6 @@
 package forme;
 
-public class Rettangolo {
+public class Rettangolo implements Forma {
 	
 	/* Variabili di istanza */
 	private int base;
@@ -11,7 +11,8 @@ public class Rettangolo {
 	
 	/* Costruttore generico */
 	public Rettangolo(Punto vertice, int base, int altezza) {
-		this.vertice = vertice;
+		//this.vertice = vertice;
+		this.vertice = new Punto(vertice.getX(), vertice.getY());
 		this.base = base;
 		this.altezza = altezza;
 	}
