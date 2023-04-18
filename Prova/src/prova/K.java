@@ -1,5 +1,5 @@
 package prova;
-
+/* Ciao */
 public class K implements C{
 	
 	public void dim(C c) {
