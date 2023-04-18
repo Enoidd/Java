@@ -1,8 +1,9 @@
 package it.uniroma3.diadia;
+import it.roma3.diadia.comandi.Comando;
+import it.roma3.diadia.comandi.FabbricaDiComandi;
+import it.roma3.diadia.comandi.FabbricaDiComandiFisarmonica;
 import it.uniroma3.diadia.ambienti.Stanza;
 import it.uniroma3.diadia.attrezzi.Attrezzo;
-
-import java.util.Scanner;
 
 
 /**
@@ -63,31 +64,18 @@ public class DiaDia {
 	 * @return true se l'istruzione e' eseguita e il gioco continua, false altrimenti
 	 */
 	private boolean processaIstruzione(String istruzione) {
-		Comando comandoDaEseguire = new Comando(istruzione);
-		//if (comandoDaEseguire.getNome()==null)
-			//return false;
-		if (comandoDaEseguire.getNome().equals("fine")) {	// Se il comando da eseguire è "fine"
-			this.fine(); 
-			return true;
-		} else if (comandoDaEseguire.getNome().equals("vai"))	// Se il comando è "vai"
-			this.vai(comandoDaEseguire.getParametro());
-		else if (comandoDaEseguire.getNome().equals("aiuto"))	// Se il comando è "aiuto"
-			this.aiuto();
-		else if (comandoDaEseguire.getNome().equals("prendi"))
-			this.prendi(comandoDaEseguire.getParametro());
-		else if (comandoDaEseguire.getNome().equals("posa"))
-			this.posa(comandoDaEseguire.getParametro());
+		Comando comandoDaEseguire;
+		FabbricaDiComandi factory = new FabbricaDiComandiFisarmonica();
 		
-		else
-			//System.out.println("Comando sconosciuto");
-			console.mostraMessaggio("Comando sconosciuto");
-		if (this.partita.vinta()) {
-			//System.out.println("Hai vinto!");
-			console.mostraMessaggio("Hai vinto!");
-			return true;
-		} else
-			return false;
-	}   
+		comandoDaEseguire = factory.costruisciComando(istruzione, this.console);
+		comandoDaEseguire.esegui(this.partita);
+		
+		if(this.partita.vinta())
+			System.out.println("Hai vinto!");
+		if(!this.partita.giocatoreIsVivo())
+			System.out.println("Hai esaurito i CFU...");
+		return this.partita.isFinita();
+	}
 
 	// implementazioni dei comandi dell'utente:
 
@@ -100,35 +88,6 @@ public class DiaDia {
 			console.mostraMessaggio(elencoComandi[i] + " ");
 		/*System.out.println();*/
 		console.mostraMessaggio("");
-	}
-
-	/**
-	 * Cerca di andare in una direzione. Se c'e' una stanza ci entra 
-	 * e ne stampa il nome, altrimenti stampa un messaggio di errore
-	 */
-	private void vai(String direzione) {
-		if(direzione==null)
-			/*System.out.println("Dove vuoi andare ?");*/
-			console.mostraMessaggio("Dove vuoi andare?");
-		Stanza prossimaStanza = null;
-		//prossimaStanza = this.partita.getStanzaCorrente().getStanzaAdiacente(direzione);
-		prossimaStanza = this.partita.getLabirinto().getStanzaCorrente().getStanzaAdiacente(direzione);
-		if (prossimaStanza == null)
-			/*System.out.println("Direzione inesistente");*/
-			console.mostraMessaggio("Direzione inesistente");
-		else {
-			//this.partita.setStanzaCorrente(prossimaStanza);
-			this.partita.getLabirinto().setStanzaCorrente(prossimaStanza);
-			//int cfu = this.partita.getCfu();
-			int cfu = this.partita.getGiocatore().getCfu();
-			//this.partita.setCfu(cfu--);
-			this.partita.getGiocatore().setCfu(cfu--);
-		}
-		//System.out.println(partita.getStanzaCorrente().getDescrizione());
-		//System.out.println(partita.getLabirinto().getStanzaCorrente().getDescrizione());
-		console.mostraMessaggio(" " + partita.getLabirinto().getStanzaCorrente().getDescrizione());
-		//IoConsole.mostraMessaggio(partita.getGiocatore().getBorsa().toString() + " ");
-		
 	}
 	
 	/**

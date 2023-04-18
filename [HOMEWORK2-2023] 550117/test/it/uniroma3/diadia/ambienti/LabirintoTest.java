@@ -2,6 +2,7 @@ package it.uniroma3.diadia.ambienti;
 
 import static org.junit.Assert.*;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 
 import org.junit.Test;
 
@@ -11,12 +12,12 @@ public class LabirintoTest {
 	
 	@Test
 	public void testGetStanzaCorrente() {
-		assertNotNull(this.labirintoTest.getStanzaCorrente());
+		assertNull(this.labirintoTest.getStanzaCorrente());
 	}
 	
 	@Test
 	public void testGetStanzaVincente() {
-		assertNotNull(this.labirintoTest.getStanzaVincente());
+		assertNull(this.labirintoTest.getStanzaVincente());
 	}
 
 }

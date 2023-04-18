@@ -43,4 +43,12 @@ public class Giocatore {
 	public void setBorsa(Borsa AttrezzoBorsa) {
 		this.borsa = AttrezzoBorsa;
 	}
+	
+	/**
+	 * Metodo che verifica se il giocatore è ancora vivo
+	 * @param 
+	 */
+	public boolean isVivo() {
+		return this.cfu > 0;
+	}
 }
