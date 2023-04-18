@@ -113,10 +113,10 @@ public class DiaDia {
 	/**
 	 * Comando "Fine".
 	 */
-	private void fine() {
-		/*System.out.println("Grazie di aver giocato!");  // si desidera smettere */
-		console.mostraMessaggio("Grazie per aver giocato!");
-	}
+//	private void fine() {
+//		/*System.out.println("Grazie di aver giocato!");  // si desidera smettere */
+//		console.mostraMessaggio("Grazie per aver giocato!");
+//	}
 
 	public static void main(String[] argc) {
 		IOConsole IoConsole = new IOConsole();

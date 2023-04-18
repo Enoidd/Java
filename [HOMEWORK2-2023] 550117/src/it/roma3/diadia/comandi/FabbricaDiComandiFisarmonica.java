@@ -28,8 +28,8 @@ public class FabbricaDiComandiFisarmonica implements FabbricaDiComandi{
 //			comando = new ComandoPosa();
 //		else if(nomeComando.equals("aiuto"))
 //			comando = new ComandoAiuto();
-//		else if(nomeComando.equals("fine"))
-//			comando = new ComandoFine();
+		else if(nomeComando.equals("fine"))
+			comando = new ComandoFine();
 //		else if(nomeComando.equals("guarda"))
 //			comando = new ComandoGuarda();
 //		else
