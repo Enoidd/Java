@@ -1,13 +1,13 @@
 package it.roma3.diadia.comandi;
 
-import it.uniroma3.diadia.IOConsole;
+import it.uniroma3.diadia.IO;
 import it.uniroma3.diadia.Partita;
 import it.uniroma3.diadia.ambienti.Stanza;
 
 public class ComandoVai implements Comando {
 	// Variabili di istanza
 	private String direzione;
-	private IOConsole console;
+	private IO console;
 
 	@Override
 	public void esegui(Partita partita) {
@@ -36,7 +36,7 @@ public class ComandoVai implements Comando {
 	}
 
 	@Override
-	public void setIO(IOConsole console) {
+	public void setIO(IO console) {
 		this.console = console;
 		
 	}

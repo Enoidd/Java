@@ -1,11 +1,11 @@
 package it.roma3.diadia.comandi;
 
-import it.uniroma3.diadia.IOConsole;
+import it.uniroma3.diadia.IO;
 import it.uniroma3.diadia.Partita;
 
 public class ComandoNonValido implements Comando {
 
-	private IOConsole console;
+	private IO console;
 
 	@Override
 	public void esegui(Partita partita) {
@@ -20,7 +20,7 @@ public class ComandoNonValido implements Comando {
 	}
 
 	@Override
-	public void setIO(IOConsole console) {
+	public void setIO(IO console) {
 		// TODO Auto-generated method stub
 		this.console = console;
 	}

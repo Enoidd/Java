@@ -1,5 +1,4 @@
 package it.uniroma3.diadia.ambienti;
-import it.uniroma3.diadia.IOConsole;
 import it.uniroma3.diadia.attrezzi.Attrezzo;
 
 /**
@@ -24,7 +23,7 @@ public class Stanza {
 	private Stanza[] stanzeAdiacenti;
 	private int numeroStanzeAdiacenti;
 	private String[] direzioni;
-	private IOConsole IoConsole;
+//	private IO IoConsole;
 
 	/**
 	 * Crea una stanza. Non ci sono stanze adiacenti, non ci sono attrezzi.
@@ -37,7 +36,7 @@ public class Stanza {
 		this.direzioni = new String[NUMERO_MASSIMO_DIREZIONI];
 		this.stanzeAdiacenti = new Stanza[NUMERO_MASSIMO_DIREZIONI];
 		this.attrezzi = new Attrezzo[NUMERO_MASSIMO_ATTREZZI];
-		this.IoConsole = new IOConsole();
+//		this.IoConsole = new IOConsole();
 	}
 
 	/**
