@@ -105,7 +105,7 @@ public class Borsa {
 			if(this.attrezzi[i]!=null) {
 				if(this.attrezzi[i].getNome().equals(nomeAttrezzo))
 					a = attrezzi[i];
-					this.attrezzi[i]=null;
+					//this.attrezzi[i]=null;
 			}
 		}
 		return a;
