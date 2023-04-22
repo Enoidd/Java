@@ -1,32 +1,41 @@
 package it.uniroma3.diadia.ambienti;
-import it.uniroma3.diadia.attrezzi.Attrezzo;
+import static org.junit.Assert.assertEquals;
 
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
+import org.junit.Before;
 import org.junit.Test;
+
+import it.uniroma3.diadia.giocatore.Giocatore;
 
 public class StanzaTest {
 	/* Stato iniziale pronto */
-	Attrezzo attrezzo = new Attrezzo("ascia", 10);
-	Stanza stanza_1 = new Stanza("stanza_1");
-	Stanza stanza_2 = new Stanza("stanza_2");
-	Attrezzo attrezzo1 = null;
+	Labirinto labirinto;
+	Stanza stanza_1;
+	Stanza stanza_2;
 	
+	@Before
+	public void setUp() {
+		labirinto = new Labirinto();
+		stanza_1 = new Stanza("stanza1");
+		stanza_2 = new Stanza("Biblioteca");
+		labirinto.creaStanze();
+	}
+
 	@Test
-	public void testAddAttrezzo() {
-		assertTrue(stanza_1.addAttrezzo(attrezzo));
+	public void testGetStanzaVincente() {
+		assertEquals("Biblioteca", labirinto.getStanzaVincente().getNome());
 	}
 	
-	//@Test
-	//public void testRemoveAttrezzo() {
-	//	assertNotNull(stanza_1.removeAttrezzo(null));	// assertNull il parametro passato deve essere NULL
-	//}
-	
+	@Test
+	public void testGetStanzaCorrente() {
+		labirinto.setStanzaCorrente(stanza_1);	// imposta la stanza corrente
+		assertEquals(stanza_1.getNome(), labirinto.getStanzaCorrente().getNome());
+	}
 	
 	@Test
-	public void testHashAttrezzo() {
-		assertFalse(stanza_1.hasAttrezzo("ascia"));
+	public void testGetStanzaAdiacente() {
+		stanza_1.impostaStanzaAdiacente("est", stanza_2);	// imposta la stanza adiacente
+		assertEquals(stanza_2, stanza_1.getStanzaAdiacente("est"));
 	}
+	
 
 }
