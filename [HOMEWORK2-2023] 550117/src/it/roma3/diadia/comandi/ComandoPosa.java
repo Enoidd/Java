@@ -7,6 +7,7 @@ import it.uniroma3.diadia.attrezzi.Attrezzo;
 public class ComandoPosa implements Comando {
 
 	private String nomeAttrezzo;
+//	private IO console;
 	@Override
 	public void esegui(Partita partita) {
 		Attrezzo attrezzoInBorsa = partita.getGiocatore().getBorsa().getAttrezzo(nomeAttrezzo);
@@ -23,6 +24,7 @@ public class ComandoPosa implements Comando {
 
 	@Override
 	public void setIO(IO console) {
+//		this.console = console;
 	}
 
 }

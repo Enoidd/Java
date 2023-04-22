@@ -44,6 +44,11 @@ public class Giocatore {
 		this.borsa = AttrezzoBorsa;
 	}
 	
+	@Override
+	public String toString() {
+		return this.cfu + this.borsa.toString();
+	}
+	
 	/**
 	 * Metodo che verifica se il giocatore è ancora vivo
 	 * @param 
