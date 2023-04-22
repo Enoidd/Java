@@ -74,47 +74,6 @@ public class DiaDia {
 		return this.partita.isFinita();
 	}
 
-	// implementazioni dei comandi dell'utente:
-
-	/**
-	 * Stampa informazioni di aiuto.
-	 */
-//	private void aiuto() {
-//		for(int i=0; i< elencoComandi.length; i++) 
-//			//System.out.println(elencoComandi[i]+" ");
-//			console.mostraMessaggio(elencoComandi[i] + " ");
-//		/*System.out.println();*/
-//		console.mostraMessaggio("");
-//	}
-	
-	/**
-	 * Comando "Prendi".
-	 */
-//	private void prendi(String nomeAttrezzo) {
-//		Attrezzo attrezzoInStanza = this.partita.getLabirinto().getStanzaCorrente().getAttrezzo(nomeAttrezzo);
-//		this.partita.getGiocatore().getBorsa().addAttrezzo(attrezzoInStanza);
-//		console.mostraMessaggio(this.partita.getGiocatore().getBorsa().toString());
-//		this.partita.getLabirinto().getStanzaCorrente().removeAttrezzo(attrezzoInStanza);
-//		//System.out.println("Rimosso da stanza");
-//	}
-	
-	/**
-	 * Comando "Posa".
-	 */
-//	private void posa(String nomeAttrezzo) {
-//		Attrezzo attrezzoInBorsa = this.partita.getGiocatore().getBorsa().getAttrezzo(nomeAttrezzo);
-//		this.partita.getLabirinto().getStanzaCorrente().addAttrezzo(attrezzoInBorsa);
-//		this.partita.getGiocatore().getBorsa().removeAttrezzo(nomeAttrezzo);
-//	}
-	
-	/**
-	 * Comando "Fine".
-	 */
-//	private void fine() {
-//		/*System.out.println("Grazie di aver giocato!");  // si desidera smettere */
-//		console.mostraMessaggio("Grazie per aver giocato!");
-//	}
-
 	public static void main(String[] argc) {
 		IO io = new IOConsole();
 		DiaDia gioco = new DiaDia(io);
