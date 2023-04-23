@@ -78,6 +78,21 @@ public class Borsa {
 	}
 	
 	/**
+	 * Metodo che verifica in base al peso se l'attrezzo è troppo grande per essere contenuto
+	 * nella borsa
+	 * @return true / false
+	 */
+	public boolean verificaPesoBorsa(Attrezzo attrezzo) {
+		// Se l'attrezzo non è null
+		if(attrezzo!=null)
+			// Se il peso dell'attrezzo che si vuole inserire nella borsa
+			// supera la capienza max (il peso max) della borsa
+			if(attrezzo.getPeso() + this.getPeso() >= this.getPesoMax())
+				return false;
+		return true;
+	}
+	
+	/**
 	 * Metodo che controlla se la borsa è vuota
 	 * @return true / false 
 	 */

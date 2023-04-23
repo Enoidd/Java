@@ -5,18 +5,25 @@ import it.uniroma3.diadia.Partita;
 import it.uniroma3.diadia.attrezzi.Attrezzo;
 
 public class ComandoPrendi implements Comando {
-	
+
 	private String nomeAttrezzo;
 	private IO console;
-	
+
 	@Override
 	public void esegui(Partita partita) {
+
 		Attrezzo attrezzoInStanza = partita.getLabirinto().getStanzaCorrente().getAttrezzo(nomeAttrezzo);
-		partita.getGiocatore().getBorsa().addAttrezzo(attrezzoInStanza);
-		console.mostraMessaggio(partita.getGiocatore().getBorsa().toString());
-		partita.getLabirinto().getStanzaCorrente().removeAttrezzo(attrezzoInStanza);
-		// Debugging a stampa
-		System.out.println("Rimosso da stanza");
+		// Verifica se l'attrezzo può essere contenuto nella borsa (in base al peso)
+		if(partita.getGiocatore().getBorsa().verificaPesoBorsa(attrezzoInStanza)) {	// se l'attrezzo entra nella borsa
+			// Rimuovilo dalla stanza e mettilo in borsa
+			partita.getGiocatore().getBorsa().addAttrezzo(attrezzoInStanza);
+			console.mostraMessaggio(partita.getGiocatore().getBorsa().toString());
+			partita.getLabirinto().getStanzaCorrente().removeAttrezzo(attrezzoInStanza);
+			// Debugging a stampa
+			System.out.println("Rimosso da stanza");
+		}
+		else
+			console.mostraMessaggio("Attrezzo troppo pesante per essere introddo nella borsa.");
 
 	}
 

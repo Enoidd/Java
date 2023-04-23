@@ -183,11 +183,23 @@ public class Stanza {
 		return ho_cancellato;
 	}
 
-
+	/**
+	 * Metodo che mostra le direzioni
+	 * @return direzioni possibili dalla stanza corrente
+	 */
 	public String[] getDirezioni() {
 		String[] direzioni = new String[this.numeroStanzeAdiacenti];
 		for(int i=0; i<this.numeroStanzeAdiacenti; i++)
 			direzioni[i] = this.direzioni[i];
 		return direzioni;
+	}
+	
+	/**
+	 * Metodo che verifica se è possibile posare un attrezzo in stanza in base
+	 * a quanti attrezzi già ci sono
+	 * @return true / false
+	 */
+	public int getAttrezziInStanza() {
+		return this.numeroAttrezzi;
 	}
 }
