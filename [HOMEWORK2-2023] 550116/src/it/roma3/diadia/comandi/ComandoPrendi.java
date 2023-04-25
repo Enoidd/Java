@@ -8,7 +8,7 @@ public class ComandoPrendi implements Comando {
 
 	private String nomeAttrezzo;
 	private IO console;
-
+	private String nome = "prendi";
 	@Override
 	public void esegui(Partita partita) {
 
@@ -35,6 +35,18 @@ public class ComandoPrendi implements Comando {
 	@Override
 	public void setIO(IO console) {
 		this.console = console;
+	}
+
+	@Override
+	public String getParametro() {
+		// TODO Auto-generated method stub
+		return this.nomeAttrezzo;
+	}
+
+	@Override
+	public String getNome() {
+		// TODO Auto-generated method stub
+		return nome;
 	}
 
 }

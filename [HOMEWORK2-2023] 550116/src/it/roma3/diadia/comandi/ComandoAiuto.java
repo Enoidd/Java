@@ -8,6 +8,7 @@ public class ComandoAiuto implements Comando {
 	
 	static final private String[] elencoComandi = {"vai", "aiuto", "fine", "prendi", "posa"};
 	private IO console;
+	private String nome = "aiuto";
 	
 	@Override
 	public void esegui(Partita partita) {
@@ -27,6 +28,18 @@ public class ComandoAiuto implements Comando {
 	@Override
 	public void setIO(IO console) {
 		this.console = console;
+	}
+
+	@Override
+	public String getParametro() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getNome() {
+		// TODO Auto-generated method stub
+		return nome;
 	}
 
 }

@@ -8,7 +8,8 @@ public class ComandoVai implements Comando {
 	// Variabili di istanza
 	private String direzione;
 	private IO console;
-
+	private String nome = "vai";
+	
 	@Override
 	public void esegui(Partita partita) {
 		
@@ -39,6 +40,18 @@ public class ComandoVai implements Comando {
 	public void setIO(IO console) {
 		this.console = console;
 		
+	}
+
+	@Override
+	public String getParametro() {
+		// TODO Auto-generated method stub
+		return this.direzione;
+	}
+
+	@Override
+	public String getNome() {
+		// TODO Auto-generated method stub
+		return nome;
 	}
 
 }

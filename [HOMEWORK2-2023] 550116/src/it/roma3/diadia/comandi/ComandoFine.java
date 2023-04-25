@@ -6,6 +6,7 @@ import it.uniroma3.diadia.Partita;
 public class ComandoFine implements Comando {
 
 	private IO console;
+	private String nome = "fine";
 
 	@Override
 	public void esegui(Partita partita) {
@@ -24,6 +25,18 @@ public class ComandoFine implements Comando {
 	public void setIO(IO console) {
 		// TODO Auto-generated method stub
 		this.console = console;
+	}
+
+	@Override
+	public String getParametro() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public String getNome() {
+		// TODO Auto-generated method stub
+		return nome;
 	}
 
 }

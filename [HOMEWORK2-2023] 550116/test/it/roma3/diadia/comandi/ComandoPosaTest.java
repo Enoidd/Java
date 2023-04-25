@@ -66,5 +66,22 @@ public class ComandoPosaTest {
 		comando.esegui(partita);
 		assertTrue(partita.getLabirinto().getStanzaCorrente().hasAttrezzo("a1"));
 	}
+	
+	@Test
+	public void testAddAttrezzoStanzaPiena() {
+		partita.getGiocatore().getBorsa().addAttrezzo(a1);
+		partita.getGiocatore().getBorsa().addAttrezzo(a2);
+		partita.getGiocatore().getBorsa().addAttrezzo(a3);
+		partita.getGiocatore().getBorsa().addAttrezzo(a4);
+		partita.getGiocatore().getBorsa().addAttrezzo(a5);
+		partita.getGiocatore().getBorsa().addAttrezzo(a6);
+		partita.getGiocatore().getBorsa().addAttrezzo(a7);
+		partita.getGiocatore().getBorsa().addAttrezzo(a8);
+		partita.getGiocatore().getBorsa().addAttrezzo(a9);
+		partita.getGiocatore().getBorsa().addAttrezzo(a10);
+		comando.setParametro("a11");
+		comando.esegui(partita);
+		assertFalse(partita.getLabirinto().getStanzaCorrente().hasAttrezzo("a11"));	// l'attrezzo non è stato aggiunto
+	}
 
 }

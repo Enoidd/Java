@@ -30,4 +30,14 @@ public interface Comando{
 	 * Set IOConsole
 	 */
 	public void setIO(IO console);
+	
+	/**
+	 * Get parametro
+	 */
+	public String getParametro();
+	
+	/**
+	 * Get nome
+	 */
+	public String getNome();
 }	
