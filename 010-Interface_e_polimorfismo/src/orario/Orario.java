@@ -1,6 +1,6 @@
 package orario;
 
-public class Orario  {
+public class Orario implements Comparabile {
 	// Var di istanza
 	private int ore;
 	private int minuti;
@@ -27,9 +27,14 @@ public class Orario  {
 	 * @return true / false
 	 */
 	@Override
-	public boolean minoreDi(Orario comparabile) {
+	public boolean minoreDi(Comparabile comparabile) {
+		/**
+		 * Sopraggiunge il problema che 'Comparabile' non conosce orario, e soltanto 'orario' conosce
+		 * 'comparabile' perché la classe 'orario' è sotto tipo del supertipo 'comparabile', di consequenza
+		 * comparabile non possiede i metodi get etc., bisogna quindi fare un operazione di downcasting
+		 */
 		Orario o;
-		o = (Orario) comparabile;
+		o = (Orario) comparabile;	// downcasting
 		// se l'orario fornito è maggiore di quello corrente
 		if(this.getOre() > o.getOre())
 			return false;

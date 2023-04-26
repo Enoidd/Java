@@ -35,6 +35,8 @@ public class Main {
 		System.out.println("Ore: "+ orario[2].getOre() + ", minuti: " + orario[2].getMinuti());
 		System.out.println("Ore: "+ orario[3].getOre() + ", minuti: " + orario[3].getMinuti());
 		System.out.println("Ore: "+ orario[1].getOre() + ", minuti: " + orario[4].getMinuti());
+		
+		System.out.println("Risultato: " + orario[2].minoreDi(orario[0]));	// false
 	}
 
 }
