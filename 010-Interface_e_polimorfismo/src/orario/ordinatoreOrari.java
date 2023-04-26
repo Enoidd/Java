@@ -2,7 +2,7 @@ package orario;
 
 public class ordinatoreOrari {
 
-	public static void ordina(Orario[] lista) {
+	public void ordina(Comparabile[] lista) {
 
 		int min;
 		// Scorri tutta la collezione di elementi
@@ -11,7 +11,7 @@ public class ordinatoreOrari {
 			for(int i=ord+1; i<lista.length; i++)
 				if(lista[i].minoreDi(lista[min])) {
 					// Scambia
-					Orario temp = lista[i];
+					Comparabile temp = lista[i];
 					lista[i] = lista[min];
 					lista[min] = temp;
 				}

@@ -1,6 +1,6 @@
 package orario;
 
-public class Orario {
+public class Orario  {
 	// Var di istanza
 	private int ore;
 	private int minuti;
@@ -26,7 +26,10 @@ public class Orario {
 	 * @param Oggetto orario
 	 * @return true / false
 	 */
-	public boolean minoreDi(Orario o) {
+	@Override
+	public boolean minoreDi(Orario comparabile) {
+		Orario o;
+		o = (Orario) comparabile;
 		// se l'orario fornito è maggiore di quello corrente
 		if(this.getOre() > o.getOre())
 			return false;
