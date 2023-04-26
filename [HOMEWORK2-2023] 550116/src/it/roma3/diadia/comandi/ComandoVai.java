@@ -25,7 +25,7 @@ public class ComandoVai implements Comando {
 		else {
 			partita.getLabirinto().setStanzaCorrente(prossimaStanza);
 			int cfu = partita.getGiocatore().getCfu();
-			partita.getGiocatore().setCfu(cfu--);
+			partita.getGiocatore().setCfu(cfu-1);
 		}
 		console.mostraMessaggio(" " + partita.getLabirinto().getStanzaCorrente().getDescrizione());
 	}
