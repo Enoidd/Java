@@ -2,6 +2,7 @@ package studente;
 
 public class Main {
 
+	@SuppressWarnings("static-access")
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Studente[] s = new Studente[5];
@@ -33,6 +34,8 @@ public class Main {
 		System.out.println("Esito: " + s[1].compara(s[2]));	// 20 < 30 Esito: -1
 		System.out.println("Esito: " + s[1].compara(s[1]));	// 20 < 30 Esito: 0
 		System.out.println("Esito: " + s[2].compara(s[1]));	// 20 < 30 Esito: 1
+		
+		System.out.println("Esito: " + o.ricercaBin(s,  s[2]));
 	}
 
 }
