@@ -18,4 +18,13 @@ public class ordinatoreEta {
 				}
 		}
 	}
+
+	public static int ricercaBin(Comparabile[] v, Comparabile cercato) {
+
+		for(int i=0; i<v.length; i++) 
+			if(v[i].compara(cercato)==0) {
+				return i;
+			}
+		return -1;
+	}
 }
