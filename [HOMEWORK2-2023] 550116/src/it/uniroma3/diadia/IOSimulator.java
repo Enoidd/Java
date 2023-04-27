@@ -6,6 +6,8 @@ package it.uniroma3.diadia;
  * 
  * 	- Si crea una nuova partita che anziché avere IOConsole ha IOSimulator (ha già tutta una serie di righe in input)
  * 	- Si gioca tutta la partita, si legge il risultato per poter fare in qualche modo fare le dovute asserzioni */
+
+// IO contiene i metodi mostraMessaggio e leggiRiga
 public class IOSimulator implements IO {
 	// Per leggere in automatico i comandi (automatizza ciò che deve fare)
 	public String[] righeDaLeggere;
@@ -14,6 +16,8 @@ public class IOSimulator implements IO {
 	// Per leggere tutti i messaggi che vengono stampati in automatico
 	public String[] messaggiStampati;
 	public int indexRigheStampate;
+	
+	public int indexMessaggiStampati;
 	
 	// Costruttore
 	public IOSimulator(String[] righeDaLeggere) {
@@ -24,6 +28,8 @@ public class IOSimulator implements IO {
 		// Per leggere i comandi mostrati a stampa
 		this.messaggiStampati = new String[100];
 		this.indexRigheStampate = 0;
+		
+		this.indexMessaggiStampati = 0;
 	}
 	
 	/* L'idea è immagazzinare tutti i messaggi che si stampano a video */
@@ -32,7 +38,7 @@ public class IOSimulator implements IO {
 		// Ogni qual volta che un messaggio verrà stampato, quest'ultimo verrà immagazzinato
 		// all'interno dell'array 'messaggiStampati'
 		this.messaggiStampati[this.indexRigheStampate] = messaggio;
-		this.indexRigheDaLeggere++;
+		this.indexRigheDaLeggere++;	// passa alla prossima riga da riempire
 	}
 
 	/* L'idea è quella di "automatizzare" i comandi in input, per automatizzarli si sfrutta un array, ossia
@@ -47,4 +53,27 @@ public class IOSimulator implements IO {
 		return rigaLetta;	// ritorna la riga comando che hai letto dall'array
 	}
 
+	/**
+	 * Restituisce il prossimo messaggio nell'array dei messaggiStampati:
+	 * 
+	 * IDEA:
+	 * Funziona esattamente come leggiRiga, ma scandisce i messaggiStampati
+	 */
+	public String nextMessaggio() {
+		
+		String next = this.messaggiStampati[this.indexMessaggiStampati];
+		this.indexMessaggiStampati++;
+		return next;
+	}
+	
+	/**
+	 * Restituisce se c'è un messaggio da mostrare.
+	 * 
+	 * IDEA:
+	 * In IOSimulator chiederemo ogni volta se c'è un prossimo messaggio, e se questo c'è allora fornirà il prossimo messaggio
+	 */
+	public boolean hasNextMessaggio() {
+		// Se il numero dei messaggi stampati è minore di quelli effettivamente presente, significa che ho ancora messaggi da stampare
+		return this.indexMessaggiStampati < this.indexRigheStampate;
+	}
 }
