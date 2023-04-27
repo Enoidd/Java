@@ -3,7 +3,7 @@ package it.uniroma3.diadia.ambienti;
 public class StanzaBuia extends Stanza {
 	// Variabili di istanza
 	private String nomeAttrezzoLuminescente;
-	
+	// Costruttore
 	public StanzaBuia(String nomeStanza, String nomeAttrezzoLuminescente) {
 		super(nomeStanza);
 		this.nomeAttrezzoLuminescente = nomeAttrezzoLuminescente;

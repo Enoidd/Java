@@ -34,7 +34,7 @@ public class ComandoPosa implements Comando {
 
 	@Override
 	public void setIO(IO console) {
-//		this.console = console;
+		this.console = console;
 	}
 
 	@Override
