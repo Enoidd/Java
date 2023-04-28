@@ -38,7 +38,7 @@ public class IOSimulator implements IO {
 		// Ogni qual volta che un messaggio verrà stampato, quest'ultimo verrà immagazzinato
 		// all'interno dell'array 'messaggiStampati'
 		this.messaggiStampati[this.indexRigheStampate] = messaggio;
-		this.indexRigheDaLeggere++;	// passa alla prossima riga da riempire
+		this.indexRigheStampate++;	// passa alla prossima riga da riempire
 	}
 
 	/* L'idea è quella di "automatizzare" i comandi in input, per automatizzarli si sfrutta un array, ossia

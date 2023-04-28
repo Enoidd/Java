@@ -5,6 +5,7 @@ import it.uniroma3.diadia.Partita;
 
 public class ComandoFine implements Comando {
 
+	public static final String MESSAGGIO_FINE = "Grazie per aver giocato!";
 	private IO console;
 	private String nome = "fine";
 
@@ -12,7 +13,7 @@ public class ComandoFine implements Comando {
 	public void esegui(Partita partita) {
 		// TODO Auto-generated method stub
 		partita.setFinita(); // Partita terminata
-		this.console.mostraMessaggio("Grazie per aver giocato!");
+		this.console.mostraMessaggio(MESSAGGIO_FINE);
 	}
 
 	@Override

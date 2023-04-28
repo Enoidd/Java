@@ -13,7 +13,6 @@ public class ComandoVai implements Comando {
 	@Override
 	public void esegui(Partita partita) {
 		
-		
 		if(direzione==null)
 			/*System.out.println("Dove vuoi andare ?");*/
 			console.mostraMessaggio("Dove vuoi andare?");
@@ -27,7 +26,7 @@ public class ComandoVai implements Comando {
 			int cfu = partita.getGiocatore().getCfu();
 			partita.getGiocatore().setCfu(cfu-1);
 		}
-		console.mostraMessaggio(" " + partita.getLabirinto().getStanzaCorrente().getDescrizione());
+		//console.mostraMessaggio(" " + partita.getLabirinto().getStanzaCorrente().getDescrizione());
 	}
 
 	@Override

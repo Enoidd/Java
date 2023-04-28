@@ -17,7 +17,7 @@ import it.roma3.diadia.comandi.FabbricaDiComandiFisarmonica;
 
 public class DiaDia {
 	
-	static final private String MESSAGGIO_BENVENUTO = ""+
+	public static final String MESSAGGIO_BENVENUTO = ""+
 			"Ti trovi nell'Universita', ma oggi e' diversa dal solito...\n" +
 			"Meglio andare al piu' presto in biblioteca a studiare. Ma dov'e'?\n"+
 			"I locali sono popolati da strani personaggi, " +
@@ -30,12 +30,12 @@ public class DiaDia {
 //	static final private String[] elencoComandi = {"vai", "aiuto", "fine", "prendi", "posa"};
 
 	private Partita partita;
-	private IOConsole console; // Senza down casting: private IO console;
+	private IO console; // Senza down casting: private IO console;
 	
 	/* Costruttore */
 	public DiaDia(IO io) {
 		this.partita = new Partita(); // Creo una nuova partita
-		this.console = (IOConsole) io; // <<<---- CHIEDI AL PROF 
+		this.console = io; // <<<---- CHIEDI AL PROF 
 	}
 
 	/**
@@ -64,7 +64,7 @@ public class DiaDia {
 		Comando comandoDaEseguire;
 		FabbricaDiComandi factory = new FabbricaDiComandiFisarmonica();
 		
-		comandoDaEseguire = factory.costruisciComando(istruzione, this.console);
+		comandoDaEseguire = factory.costruisciComando(istruzione, console);
 		comandoDaEseguire.esegui(this.partita);
 		
 		if(this.partita.vinta())
