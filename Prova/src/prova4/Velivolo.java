@@ -10,6 +10,6 @@ public class Velivolo {
 	}
 
 	public String toString() {
-		return "Velivolo";
+		return "Velivolo" + " " + this.tipologia();
 	}
 }

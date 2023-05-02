@@ -12,14 +12,14 @@ public class Main {
 		/* Prova della interfaccia 'Strumento' 
 		 * Si denota che l'oggetto istanziato: Tamburo, Musicista, Tromba hanno accesso
 		 * al metodo 'produciSuono' contenuto in 'Strumento' */
-		tromba.produciSuono();
+		tromba.produciSuono();	// pe-pe-re-pe-pe
 		
-		tamburo.produciSuono();
+		tamburo.produciSuono();	// bum-bum-bum
 		
 		Chitarra c = new Chitarra();
 		Strumento t = new Tamburo();	// 'Tamburo' è sotto tipo di 'Strumento' che è supertipo di 'Tamburo'
-		ludovico.suona(c);	// Ludovico suona il parametro passato che è la 'Chitarra'
-		ludovico.suona(t); 	// Ludovico suona il parametro passato che è la 'Tamburo'
+		ludovico.suona(c);	// Ludovico suona il parametro passato che è la 'Chitarra' - dlen-dlen-dlen
+		ludovico.suona(t); 	// Ludovico suona il parametro passato che è la 'Tamburo' - bum-bum-bum
 		
 		/*************************/
 		

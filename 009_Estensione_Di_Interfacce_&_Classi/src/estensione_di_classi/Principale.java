@@ -12,12 +12,19 @@ public class Principale {
 		 * 'setNome' 
 		 */
 		anonimo.setNome("Paolo");
+//		System.out.println(anonimo.getNome());
+//		System.out.println(anonimo.toString());
 		
 		Persona p = new Studente("Paolo", "123456");
-		p.setNome("Anna");
-		System.out.println(p.getNome());
-		Studente s = new Studente("Luigi", "654321");
-		s.setNome("Antonio");
+//		System.out.println(p.getNome());	// stampa: PAOLO
+		p.setNome("Anna");	// Cambio nome di 'p' da PAOLO a ANNA
+		System.out.println(p.getNome());	// stampa: ANNA
+		System.out.println(p.toString());	// stampa: ANNA, 123456
+		
+		Studente s = new Studente("Luigi", "654321");	// 's' si chiama LUIGI
+		s.setNome("Antonio");	// Cambio nome di 's' da LUIGI a ANTONIO
+		System.out.println(s.getNome());	// stampa: LUIGI
+		System.out.println(s.toString());	// stampa: LUIGI, 645321
 		/*
 		 * Posso invocare il metodo 'setNome' sia con tipo statico 'Persona'
 		 * sia con tipo statico 'Studente', infatti 's' è di tipo statico 'Studente'

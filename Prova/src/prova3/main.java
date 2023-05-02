@@ -9,6 +9,10 @@ public class main {
 		a.dim(b);
 		L a1 = new L();
 		a1.dim(a);
+		
+		b = a1;
+		
+		a1.dim(b);
 
 	}
 
