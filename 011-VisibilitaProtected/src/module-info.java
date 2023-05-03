@@ -1,0 +1,9 @@
+/**
+ * 
+ */
+/**
+ * @author scard
+ *
+ */
+module VisibilitaProtected {
+}
