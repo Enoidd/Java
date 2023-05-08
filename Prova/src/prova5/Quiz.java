@@ -8,7 +8,8 @@ public class Quiz {
 
 		J b = new J();
 
-
+//		System.out.println(""+a);
+//		System.out.println(""+b);
 
 		a.me();
 
@@ -16,10 +17,15 @@ public class Quiz {
 		a.greet(a);
 		a.greet(b);
 		b.greet(a);
+		
 		a.greet((J)a);
 		b.greet((K)a);
 		b.greet((K)b);
 		a.greet((J)b);
-
+		
+		a.greet((K)a);
+		b.greet((J)a);
+		b.greet((J)b);
+		a.greet((K)b);
 	}
 }
