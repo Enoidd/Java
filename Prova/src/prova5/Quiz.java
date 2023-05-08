@@ -12,7 +12,8 @@ public class Quiz {
 //		System.out.println(""+b);
 
 		a.me();
-
+		b.me();
+		
 		b.greet(b);
 		a.greet(a);
 		a.greet(b);
