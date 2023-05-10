@@ -12,6 +12,6 @@ public class Coppias {
 		
 		T tmp;
 		
-		tmp = c.
+//		tmp = c.
 	}
 }
