@@ -1,4 +1,4 @@
-package ordinamentoNaturale;
+package comparable_liste;
 
 import static org.junit.Assert.*;
 
