@@ -1,4 +1,4 @@
-package comparator_liste;
+package d_comparator_liste;
 
 import java.util.*;
 

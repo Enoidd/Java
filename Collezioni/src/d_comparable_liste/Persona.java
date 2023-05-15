@@ -1,4 +1,4 @@
-package comparable_liste;
+package d_comparable_liste;
 
 import java.lang.String;
 import java.util.List;
