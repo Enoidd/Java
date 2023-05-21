@@ -1,4 +1,4 @@
-package d_esercizio_slide;
+package d_esercizio_comparator_libro;
 
 import java.util.List;
 

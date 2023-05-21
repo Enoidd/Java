@@ -1,4 +1,4 @@
-package d_liste_esercizio_quiz;
+package d_esercizio_comparator_studente;
 
 import java.util.List;
 import java.util.ArrayList;

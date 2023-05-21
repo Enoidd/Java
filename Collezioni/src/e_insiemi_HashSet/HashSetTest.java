@@ -1,4 +1,4 @@
-package insiemi_HashSet;
+package e_insiemi_HashSet;
 
 import static org.junit.Assert.*;
 import java.util.*;
