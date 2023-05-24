@@ -22,8 +22,8 @@ public class Biblioteca {
 
 	public List<Libro> elencoOrdinatoPerPagine() {
 		
-		ComparatorePerPagine cmp = new ComparatorePerPagine();
-		Collections.sort(this.elenco, cmp);
+		//ComparatorePerPagine cmp = new ComparatorePerPagine();
+		Collections.sort(this.elenco);
 		return this.elenco;
 	}
 	

@@ -1,6 +1,6 @@
 package e_insimi_esercizio_HashSet_persona;
 
-public class Persona{
+public class Persona {
 
 	private String nome;
 	private int eta;

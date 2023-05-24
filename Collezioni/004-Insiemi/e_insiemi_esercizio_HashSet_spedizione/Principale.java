@@ -3,6 +3,15 @@ package e_insiemi_esercizio_HashSet_spedizione;
 import java.util.HashSet;
 import java.util.Set;
 
+/*
+ * Gli Insiemi 'HashSet' utilizzano due metodi che servono a verificare la presenza di duplicati.
+ * 
+ * Metodi:
+ * 
+ * 	- Equals (Override)
+ * 	- HashCode 
+ * 
+ */
 public class Principale {
 
 	public static void main(String[] args) {

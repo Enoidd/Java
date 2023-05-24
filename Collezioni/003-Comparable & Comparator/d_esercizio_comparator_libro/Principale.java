@@ -8,7 +8,7 @@ public class Principale {
 		Biblioteca biblioteca = new Biblioteca();
 		
 		Libro l1 = new Libro("I misteri", 200);
-		Libro l2 = new Libro("La vita", 300);
+		Libro l2 = new Libro("La vita", 1400);
 		Libro l3 = new Libro("Essere", 1000);
 		
 		biblioteca.aggiungiLibro(l1);

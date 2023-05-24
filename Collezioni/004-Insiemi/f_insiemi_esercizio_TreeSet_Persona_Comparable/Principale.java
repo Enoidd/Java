@@ -1,8 +1,6 @@
-package f_insiemi_esercizio_TreeSet_Persona;
+package f_insiemi_esercizio_TreeSet_Persona_Comparable;
 
-import java.util.Collections;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 
 import d_comparable_liste.Persona;
 
@@ -13,9 +11,9 @@ public class Principale {
 		
 		Persona p1 = new Persona("Sandro", 33);
 		Persona p2 = new Persona("Alfio", 23);
-		Persona p3 = new Persona("Sandro", 43);
+		Persona p3 = new Persona("Sara", 43);
 		
-		Set<Persona> persone = new TreeSet<>();
+		Set<Persona> persone = new TreeSet<Persona>();
 		
 		/*
 		 * Se aggiungi due persone con stesso nome e età uguale o diversa non le aggiunge.
@@ -30,9 +28,6 @@ public class Principale {
 		for(Persona p : persone) {
 			System.out.println(""+p.getNome()+", "+p.getEta());
 		}
-		
-		
-		
 	}
 
 }

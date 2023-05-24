@@ -1,7 +1,4 @@
-package f_insiemi_esercizio_TreeSet_Persona;
-
-import java.util.Set;
-import java.util.Collections;
+package f_insiemi_esercizio_TreeSet_Persona_Comparable;
 
 public class Persona implements Comparable<Persona>{
 
