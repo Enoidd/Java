@@ -24,6 +24,6 @@ public class Quiz {
         p3.aggiungiNome("Paolo", 14);
         p4.aggiungiNome("Carla", 15);
         
-        System.out.println("Duplicati trovati: "+ nomi.);
+//        System.out.println("Duplicati trovati: "+ nomi.);
     }
 }
