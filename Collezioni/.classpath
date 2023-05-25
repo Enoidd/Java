@@ -10,6 +10,7 @@
 	<classpathentry kind="src" path="003-Comparable &amp; Comparator"/>
 	<classpathentry kind="src" path="004-Insiemi"/>
 	<classpathentry kind="src" path="005-Mappe"/>
+	<classpathentry kind="src" path="df"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
