@@ -1,4 +1,4 @@
-package insiemi_TreeSet;
+package f_insiemi_TreeSet;
 
 public class Persona implements Comparable<Persona> {
 
@@ -20,11 +20,10 @@ public class Persona implements Comparable<Persona> {
 	 * L'interface 'Set<E>' che estende 'Collection<E>' offre tutti e soli i metodi della interface 'Collection<E>'
 	 * con il fatto che non ammette DUPLICATI.
 	 * 
-	 * Il Criterio di equivalenza per non ammettere duplicati è dato da:
+	 * Il Criterio di equivalenza per non ammettere duplicati di TreeSet<> è dato da:
+	 *
 	 * 
-	 * TreeSet<E>:
-	 * 
-	 * Richiede due metodi: public boolean equals(Object o) & public int compareTo() <- interno
+	 * Due metodi: public boolean equals(Object o) & public int compareTo() <- interno
 	 * oppure public int compare() <- esterno;
 	 * 
 	 */

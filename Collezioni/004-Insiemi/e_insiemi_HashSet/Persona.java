@@ -1,4 +1,4 @@
-package insiemi_HashSet;
+package e_insiemi_HashSet;
 
 public class Persona {
 	

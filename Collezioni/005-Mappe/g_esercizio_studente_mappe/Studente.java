@@ -1,4 +1,4 @@
-package mappeEsercizio;
+package g_esercizio_studente_mappe;
 
 public class Studente {
 	

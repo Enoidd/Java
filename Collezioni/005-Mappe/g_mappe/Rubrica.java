@@ -1,4 +1,4 @@
-package mappe;
+package g_mappe;
 
 import java.util.*;
 /*
