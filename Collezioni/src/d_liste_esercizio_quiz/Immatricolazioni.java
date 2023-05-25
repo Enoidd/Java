@@ -17,6 +17,7 @@ public class Immatricolazioni {
 	}
 	
 	public List<Studente> elencoOrdinatoPerEtaMatricola(){
+		
 		// Collezione che ritorna
 		List<Studente> elencoOrdinato = new ArrayList<Studente>();
 		
@@ -34,8 +35,17 @@ public class Immatricolazioni {
 		return elencoOrdinato;
 	}
 	
-//	@Override
-//	public String toString() {
-//		
-//	}
+	@Override
+	public String toString() {
+		
+		String s = "Immatricolazioni:";
+		System.out.println(s);
+		s="\n--------------------------";
+		Iterator<Studente> it = this.lista_studenti.iterator();
+		while(it.hasNext()) {	// Fintanto che ci sono elementi nella lista
+			Studente stud = it.next();
+			System.out.println(stud.toString());
+		}
+		return s;
+	}
 }

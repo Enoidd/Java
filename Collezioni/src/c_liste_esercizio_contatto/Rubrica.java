@@ -43,6 +43,7 @@ public class Rubrica{
 	
 	@Override
 	public String toString() {
+		
 		String s = "Rubrica\n";
 		s+="------------------------------\n";
 		Iterator<Contatto> it = this.rubrica.iterator();

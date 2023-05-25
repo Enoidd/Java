@@ -17,13 +17,18 @@ public class Biblioteca {
 	}
 	
 	public void aggiungiLibro(Libro libro) {
-		this.elenco.add(libro);
+		this.elenco.add(libro);	// Aggiungi alla collezione corrente il libro
 	}
 
+	/* Metodo che restituisce una collezione di Libri ordinati.
+	 * 
+	 * Il metodo di ordinamento è basato sulle pagine 
+	 *
+	 */
 	public List<Libro> elencoOrdinatoPerPagine() {
 		
 		ComparatorePerPagine cmp = new ComparatorePerPagine();
-		Collections.sort(this.elenco, cmp);
+		Collections.sort(this.elenco, cmp);	// il sort si basa sul compare
 		return this.elenco;
 	}
 	
@@ -31,7 +36,7 @@ public class Biblioteca {
 	public String toString() {
 		
 		String s = "Biblioteca:";
-		System.out.println("\nBiblioteca");
+		//System.out.println("\nBiblioteca");
 		System.out.println("---------------------\n");
 		Iterator<Libro> it = this.elenco.iterator();
 		while(it.hasNext()) {

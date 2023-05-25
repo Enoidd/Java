@@ -24,5 +24,10 @@ class Studente implements Comparable<Studente> {
 	public int compareTo(Studente studente) {
 		return this.getEta() - studente.getEta();
 	}
+	
+	@Override
+	public String toString() {
+		return ""+this.matricola+", "+this.eta;
+	}
 }
 

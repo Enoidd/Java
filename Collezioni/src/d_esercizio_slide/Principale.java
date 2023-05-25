@@ -8,7 +8,7 @@ public class Principale {
 		Biblioteca biblioteca = new Biblioteca();
 		
 		Libro l1 = new Libro("I misteri", 200);
-		Libro l2 = new Libro("La vita", 300);
+		Libro l2 = new Libro("La vita", 3000);
 		Libro l3 = new Libro("Essere", 1000);
 		
 		biblioteca.aggiungiLibro(l1);
@@ -17,6 +17,7 @@ public class Principale {
 
 		biblioteca.toString();
 		
+		// Voglio ordinare l'elenco in base alle pagine del libro
 		biblioteca.elencoOrdinatoPerPagine();
 		
 		biblioteca.toString();

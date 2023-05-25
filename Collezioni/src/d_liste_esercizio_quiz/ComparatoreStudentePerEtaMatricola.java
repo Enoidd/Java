@@ -1,6 +1,6 @@
 package d_liste_esercizio_quiz;
 
-import java.util.Comparator;
+import java.util.Comparator; // Comparatore esterno
 
 /* Ordina la Collezione Studente per eta e matricola */
 public class ComparatoreStudentePerEtaMatricola implements Comparator<Studente>{
