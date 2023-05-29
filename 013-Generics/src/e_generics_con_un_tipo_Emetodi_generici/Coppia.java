@@ -1,4 +1,9 @@
-package e_metodi_generici;
+package e_generics_con_un_tipo_Emetodi_generici;
+
+/*
+ * Possiamo avere una coppia di 'Studenti' / 'Persone'
+ * 
+ */
 
 public class Coppia<T> {
 	
@@ -40,5 +45,11 @@ public class Coppia<T> {
 		// Definita anche come upper-Bounded -> l'upper bound è T
 		this.setPrimo(coppia.getPrimo());
 		this.setSecondo(coppia.getSecondo());
+	}
+	
+	static <T> void copy(Coppia<? super T> dest, Coppia<? extends T> src) {
+		
+		dest.setPrimo(src.getPrimo());
+		dest.setSecondo(src.getSecondo());
 	}
 }

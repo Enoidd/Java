@@ -1,4 +1,4 @@
-package e_metodi_generici;
+package e_generics_con_piu_tipi_Emetodi_generici;
 
 import d_wildcard.Persona;
 
@@ -9,8 +9,10 @@ public class Studente extends Persona{
 
 	public Studente(String nome) {
 		super(nome);
+		this.nome = nome;
 	}
 
+	@Override
 	public String getNome() {
 		return this.nome;
 	}

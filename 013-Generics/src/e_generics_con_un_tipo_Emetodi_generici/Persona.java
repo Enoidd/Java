@@ -1,4 +1,4 @@
-package e_metodi_generici;
+package e_generics_con_un_tipo_Emetodi_generici;
 
 //'Persona' è super-tipo di 'Studente' (ma non conosce 'Studente')
 public class Persona {
