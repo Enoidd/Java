@@ -1,6 +1,7 @@
 package d_LinkedList;
 
 import java.util.List;
+import java.util.Collections;
 import java.util.LinkedList;
 
 public class Principale {
@@ -13,6 +14,7 @@ public class Principale {
 		myList.add("Elsa");
 		myList.add("Matteo");
 		myList.add("Sara");
+		myList.add("Sara"); // Ammette doppioni
 		
 		for(String iteratore : myList) {
 			System.out.println(iteratore);
@@ -36,6 +38,14 @@ public class Principale {
 		 *							  |nome: " " |    |nome: " "|
 		 *							  |__________|    |_________|
 		 */
+		
+		Collections.sort(myList);
+		System.out.println("=====CON SORT\n");
+		for(String iteratore : myList) {
+			System.out.println(iteratore);
+		}
+		
+		List<Persona> list = new LinkedList<>();
 	}
 
 }
